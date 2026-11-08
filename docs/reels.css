@@ -1,0 +1,51 @@
+.reel-series { margin-block: clamp(42px,6vw,84px); scroll-margin-top: 96px; }
+.reel-series .library-heading { margin-bottom: .9rem; }
+.reel-series .library-heading p { max-width: 56ch; }
+.reel-tools { display: flex; gap: .45rem; align-items: center; justify-content: flex-end; margin: 0 0 .55rem; }
+.reel-count { margin-inline-end: .35rem; color: inherit; font: 600 .78rem/1 system-ui,sans-serif; font-variant-numeric: tabular-nums; }
+.reel-tools button { width: 42px; height: 42px; border-radius: 50%; border: 1px solid currentColor; background: transparent; color: inherit; font: 1.2rem/1 system-ui,sans-serif; cursor: pointer; }
+.reel-tools button:disabled { opacity: .29; cursor: default; }
+.reel-row { display: grid; grid-auto-flow: column; grid-auto-columns: clamp(176px,20.6%,259px); gap: clamp(12px,1.6vw,23px); align-items: start; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity; scrollbar-width: thin; padding: 2px 2px .65rem; }
+.reel-card { min-width: 0; scroll-snap-align: start; scroll-margin: 0; color: inherit; }
+.reel-card video { display: block; width:100%; height:auto; aspect-ratio: var(--film-ratio,9/16); object-fit:cover; border: 0; background: #16221d; }
+.reel-card h3,.home-reels .reel-card h4 { color: inherit; font: inherit; font-weight: 700; font-size: clamp(16px,1.6vw,22px); line-height: 1.30; margin: .7rem 0 .25rem; overflow-wrap: anywhere; }
+.reel-links,.series-links { display: flex; flex-wrap: wrap; gap: .45rem .85rem; align-items: baseline; }
+.reel-links { margin-top:.3rem; font-size:.79rem; }
+.reel-links a,.series-links a { color: inherit; border-bottom:1px solid currentColor; text-decoration:none; line-height:1.65; }
+.reel-links a[aria-current=true] { font-weight:700; border-bottom-width:2px; }
+.reel-card .reel-time { font: 600 .77rem/1.5 system-ui,sans-serif; margin-right:.4rem; white-space: nowrap; font-variant-numeric:tabular-nums; }
+.reel-card .note-title { font-size:.77rem; line-height:1.45; margin:.5rem 0; }
+.series-links { margin-top:1rem; font-size:.94rem; }
+.reel-series details { margin-top:1.25rem; }
+.reel-series summary { width:fit-content; padding:.55rem 0; cursor:pointer; font-weight:600; }
+.ifbrand-series .reel-card h3 { font-family:"ZY Daisy",var(--brand-sans,system-ui),"PingFang SC",sans-serif; }
+.basiclife-brand { display:inline-flex; align-items:baseline; flex-wrap:wrap; column-gap:.45em; }
+.basiclife-brand .brand-en { font-family:var(--brand-sans,system-ui),sans-serif; font-size:.55em; letter-spacing:.005em; }
+.home-reels { padding:clamp(36px,6vw,72px) 0; background:#1b3229; color:#fcfbf3; }
+.home-reels > .wrap > h2 { margin:0 0 clamp(22px,3vw,40px); font-size:clamp(32px,4.2vw,62px); letter-spacing:-.045em; line-height:1.14; }
+.home-reel-group { display:grid; grid-template-columns:minmax(0,.82fr) minmax(0,1.55fr); align-items:center; gap:clamp(24px,5vw,76px); }
+.home-reel-group + .home-reel-group { border-top:1px solid #566f62; margin-top:clamp(28px,4vw,54px); padding-top:clamp(28px,4vw,54px); }
+.home-reel-copy h3 { margin:0 0 .55rem; font-size:clamp(24px,3vw,42px); letter-spacing:-.035em; line-height:1.2; }
+.home-reel-copy p { max-width:30ch; color:#d7e3dc; line-height:1.65; margin:.25rem 0 .75rem; }
+.home-reel-strip { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(8px,1.1vw,16px); align-items:start; }
+.home-reels .reel-card h4 { font-size:clamp(13px,1.05vw,17px); }
+.home-reels .reel-time { color:#dbe4dc; }
+.home-reels a:focus-visible,.reel-series a:focus-visible,.reel-tools button:focus-visible,.reel-row:focus-visible { outline:2px solid #809642; outline-offset:3px; }
+.air-case-related { margin-top:1.25rem; }
+@media(max-width:760px) {
+ .home-reel-group {grid-template-columns:1fr; gap:16px}
+ .reel-row {grid-auto-columns:min(66vw,244px); gap:15px}
+ .reel-tools button {width:44px;height:44px}
+ .home-reel-strip {display:grid; grid-auto-flow:column; grid-template-columns:none; grid-auto-columns:min(54vw,230px); overflow-x:auto; overscroll-behavior-x:contain; scroll-snap-type:x proximity; scrollbar-width:thin; padding-bottom:.5rem; gap:12px}
+}
+@media(prefers-reduced-motion:reduce) { .reel-row,.home-reel-strip {scroll-behavior:auto} }
+@font-face {
+ font-family:"Basic Life Titles";
+ src:url("assets/social/basiclife-title.woff2") format("woff2");
+ font-style:normal;
+ font-weight:700;
+ font-display:swap;
+}
+.basiclife-wordmark {display:block; width:clamp(226px,45%,415px); max-width:100%; height:auto;}
+#basiclife .basiclife-brand {display:block; margin-bottom:12px;}
+#basiclife .reel-card h3 {font-family:"Basic Life Titles","Noto Serif TC","Songti TC",serif; font-weight:700;}
