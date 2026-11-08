@@ -41,17 +41,57 @@ document.querySelectorAll('[data-reel-carousel]').forEach(section => {
   update();
 });
 
-document.querySelectorAll('[data-clip-choice]').forEach(link => {
-  link.addEventListener('click', event => {
-    if(event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-    event.preventDefault();
-    const card = link.closest('.reel-card');
-    const player = card.querySelector('video');
-    if(player.currentSrc !== link.href) player.src = link.href;
-    card.querySelectorAll('[data-clip-choice]').forEach(item => {
-      if(item === link) item.setAttribute('aria-current','true');
-      else item.removeAttribute('aria-current');
+// A short edit is small enough to keep ready while its full film is playing.
+document.querySelectorAll('.reel-card').forEach(card => {
+  const choices = [...card.querySelectorAll('[data-clip-choice]')];
+  if (choices.length < 2) return;
+  const player = card.querySelector('video');
+  const preview = choices[0];
+  let selected = preview;
+  let previewObjectURL = '';
+  let preparingPreview = false;
+  let pendingPreview = false;
+
+  function playSource(url) {
+    if (player.src !== url) {
+      player.preload = 'auto';
+      player.src = url;
+      player.load();
+    }
+    player.play().catch(error => {
+      if (error.name !== 'AbortError') player.focus();
     });
-    player.play().catch(() => { player.focus(); });
+  }
+  async function preparePreview() {
+    if (preparingPreview || previewObjectURL) return;
+    preparingPreview = true;
+    try {
+      const response = await fetch(preview.href);
+      if (!response.ok) return;
+      previewObjectURL = URL.createObjectURL(await response.blob());
+      if (selected === preview && pendingPreview && !player.paused && !document.hidden && player.currentTime === 0) {
+        playSource(previewObjectURL);
+      }
+    } catch { /* The original MP4 remains available through its link. */ }
+    finally { preparingPreview = false; }
+  }
+  choices.forEach(link => link.addEventListener('click', event => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    selected = link;
+    pendingPreview = link === preview && !previewObjectURL;
+    choices.forEach(choice => {
+      if (choice === link) choice.setAttribute('aria-current','true');
+      else choice.removeAttribute('aria-current');
+    });
+    playSource(link === preview && previewObjectURL ? previewObjectURL : link.href);
+    preparePreview();
+  }));
+  player.addEventListener('playing', () => { pendingPreview = false; });
+  player.addEventListener('pause', () => {
+    if (player.currentTime > 0) pendingPreview = false;
+  });
+  window.addEventListener('pagehide', event => {
+    if (!event.persisted && previewObjectURL) URL.revokeObjectURL(previewObjectURL);
   });
 });
