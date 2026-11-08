@@ -215,3 +215,26 @@ figure[id^="photo-"] { scroll-margin-top: 90px; }
   main:has(.space-case) .library-intro h1 { font-size:clamp(30px,8vw,38px); text-wrap:balance; }
 }
 .social-stories .note-title { margin:0; color:#586154; font-size:13px; line-height:1.55; }
+
+/* Portrait reels, with a visible next card on narrow screens. */
+.social-stories.mitco-shorts {
+  grid-template-columns: none;
+  grid-auto-flow: column;
+  grid-auto-columns: clamp(180px, 22%, 250px);
+  gap: clamp(16px, 2vw, 28px);
+  align-items: start;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  padding: 3px 3px 12px;
+}
+.mitco-shorts article { scroll-snap-align: start; }
+.mitco-shorts .marked-photo { aspect-ratio: 9/16; }
+.mitco-shorts .marked-photo img { display:block; width:100%; height:100%; object-fit:cover; }
+.mitco-shorts .work-links { gap: 0 12px; }
+@media (max-width: 600px) {
+  .social-stories.mitco-shorts { grid-auto-columns: min(68vw,250px); gap: 16px; }
+}
+
+.mitco-guide {display:block;margin:.25rem 0 .7rem;color:#56604e;font-size:.85rem;}
+.mitco-shorts:focus-visible {outline: 2px solid #55624b;outline-offset:2px;}
