@@ -11,33 +11,57 @@ const [previous, next] = controls.querySelectorAll('button');
 const position = controls.querySelector('output');
 let current = 0;
 
-function showPhoto(index) {
+function showPhoto(index, updateAddress = false) {
   current = (index + thumbnails.length) % thumbnails.length;
   const thumbnail = thumbnails[current];
   enlarged.src = thumbnail.dataset.enlarge;
   enlarged.alt = thumbnail.querySelector('img').alt;
   caption.textContent = thumbnail.closest('figure').querySelector('figcaption').textContent;
   position.textContent = (current + 1) + ' / ' + thumbnails.length;
+  if (updateAddress) history.replaceState(history.state, '', thumbnail.hash);
 }
-thumbnails.forEach((button, index) => {
-  button.addEventListener('click', () => {
-    showPhoto(index);
-    dialog.showModal();
-    document.body.classList.add('viewing-photo');
+
+function syncPhotoWithAddress() {
+  const index = thumbnails.findIndex(link => link.hash === location.hash);
+  if (index < 0) {
+    if (dialog.open) dialog.close();
+    return;
+  }
+  showPhoto(index);
+  if (!dialog.open) dialog.showModal();
+  document.body.classList.add('viewing-photo');
+}
+
+thumbnails.forEach(link => {
+  link.addEventListener('click', event => {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    history.pushState({galleryReturn: location.href}, '', link.hash);
+    syncPhotoWithAddress();
   });
 });
+window.addEventListener('hashchange', syncPhotoWithAddress);
+syncPhotoWithAddress();
 controls.hidden = thumbnails.length < 2;
 closeButton.addEventListener('click', () => dialog.close());
-previous.addEventListener('click', () => showPhoto(current - 1));
-next.addEventListener('click', () => showPhoto(current + 1));
-dialog.addEventListener('close', () => document.body.classList.remove('viewing-photo'));
+previous.addEventListener('click', () => showPhoto(current - 1, true));
+next.addEventListener('click', () => showPhoto(current + 1, true));
+dialog.addEventListener('close', () => {
+  document.body.classList.remove('viewing-photo');
+  if (!thumbnails.some(link => link.hash === location.hash)) return;
+  if (history.state?.galleryReturn) {
+    history.back();
+  } else {
+    history.replaceState(null, '', location.pathname + location.search);
+  }
+});
 dialog.addEventListener('click', event => {
   if (event.target === dialog) dialog.close();
 });
 dialog.addEventListener('keydown', event => {
   if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
     event.preventDefault();
-    showPhoto(current + (event.key === 'ArrowRight' ? 1 : -1));
+    showPhoto(current + (event.key === 'ArrowRight' ? 1 : -1), true);
   }
 });
 let start = null;
@@ -52,6 +76,6 @@ dialog.addEventListener('touchend', event => {
   const dx = touch.clientX - start.x, dy = touch.clientY - start.y;
   start = null;
   if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.4) {
-    showPhoto(current + (dx < 0 ? 1 : -1));
+    showPhoto(current + (dx < 0 ? 1 : -1), true);
   }
 }, {passive:true});

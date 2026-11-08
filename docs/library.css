@@ -164,3 +164,54 @@
   .release-image img,.release-player { aspect-ratio:4/4.7; }
   .release-grid time { margin-top:9px; }
 }
+
+.photo-link { display: block; cursor: zoom-in; }
+.photo-link:focus-visible, .work-links a:focus-visible { outline: 3px solid #476747; outline-offset: 3px; }
+figure[id^="photo-"] { scroll-margin-top: 90px; }
+.work-links { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 20px; margin: 8px 0 0; }
+.work-links a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
+.space-index { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.space-case { margin-block: 30px 55px; }
+.space-case .sample-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+.space-case .photo-sample .marked-photo { aspect-ratio: auto; }
+.space-case .marked-photo img { height: auto; }
+.listing-proof { margin: 40px 0 0; max-width: 850px; }
+.listing-proof img { display:block; width:100%; height:auto; background: white; }
+.listing-proof figcaption { margin-top: 8px; font-size: 14px; }
+.social-stories { display: grid; gap: 30px; grid-template-columns: repeat(2,minmax(0,1fr)); }
+.social-stories article { min-width:0; }
+.social-stories .marked-photo { aspect-ratio: 16/10; }
+.social-stories h3 { margin: 14px 0 4px; font-size: clamp(18px,2vw,27px); }
+.social-cover-link { display:block; }
+@media(max-width:760px) { .space-index { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width:540px) {
+  .space-index, .space-case .sample-grid, .social-stories { grid-template-columns: 1fr; }
+  .social-stories { gap:24px; }
+}
+
+@font-face {
+  font-family: "ZY Daisy";
+  src: url("assets/ifbrand-daisy.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+0020-00FF;
+}
+.ifbrand-series h2, .ifbrand-series .film-caption h3, .ifbrand-series .film-caption span,
+.library-jumps a[href="#ifbrand"] {
+  font-family: "ZY Daisy", var(--brand-sans, system-ui), "PingFang SC", sans-serif;
+  font-weight: 400;
+  font-synthesis: none;
+}
+.ota-project { margin-top:44px; }
+.ota-project h2 { font-size:clamp(22px,2.4vw,35px); }
+.ota-project .listing-proof { margin-top:18px; }
+.social-stories { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.social-stories .marked-photo { aspect-ratio:4/5; background:#17211c; }
+.social-stories .marked-photo img { object-fit:contain; }
+@media (max-width:760px) { .social-stories { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:540px) { .social-stories { grid-template-columns:1fr; } }
+@media(max-width:540px) {
+  main:has(.space-case) .library-intro h1 { font-size:clamp(30px,8vw,38px); text-wrap:balance; }
+}
+.social-stories .note-title { margin:0; color:#586154; font-size:13px; line-height:1.55; }
