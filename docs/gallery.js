@@ -43,20 +43,25 @@ thumbnails.forEach(link => {
 window.addEventListener('hashchange', syncPhotoWithAddress);
 syncPhotoWithAddress();
 controls.hidden = thumbnails.length < 2;
-closeButton.addEventListener('click', () => dialog.close());
-previous.addEventListener('click', () => showPhoto(current - 1, true));
-next.addEventListener('click', () => showPhoto(current + 1, true));
-dialog.addEventListener('close', () => {
-  document.body.classList.remove('viewing-photo');
-  if (!thumbnails.some(link => link.hash === location.hash)) return;
+function dismissPhoto() {
   if (history.state?.galleryReturn) {
     history.back();
   } else {
     history.replaceState(null, '', location.pathname + location.search);
+    dialog.close();
   }
+}
+
+closeButton.addEventListener('click', dismissPhoto);
+dialog.addEventListener('cancel', event => {
+  event.preventDefault();
+  dismissPhoto();
 });
+previous.addEventListener('click', () => showPhoto(current - 1, true));
+next.addEventListener('click', () => showPhoto(current + 1, true));
+dialog.addEventListener('close', () => document.body.classList.remove('viewing-photo'));
 dialog.addEventListener('click', event => {
-  if (event.target === dialog) dialog.close();
+  if (event.target === dialog) dismissPhoto();
 });
 dialog.addEventListener('keydown', event => {
   if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
