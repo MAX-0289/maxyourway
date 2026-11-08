@@ -1,0 +1,46 @@
+name: Publish verified portfolio cases
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/portfolio-edition.yml']
+permissions:
+  contents: write
+jobs:
+  publish:
+    if: github.repository == 'MAX-0289/maxyourway'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply reviewed case updates
+        run: |
+          python3 - <<'PYTHON'
+          import base64, hashlib, io, json, zipfile
+          from pathlib import Path, PurePosixPath
+          bundles = [(['chef-film-01.txt', 'chef-film-02.txt', 'chef-film-03.txt', 'chef-film-04.txt'], 'b2f60595b0b8a61b3a0347b51484ffdc53407dbed770e19a16a4579c268c9f3e'), (['portfolio-edition-01.txt', 'portfolio-edition-02.txt'], '1880db10a8c607162c1707abd0a985c9fa9c5b19b93c73ff4a94de1397e26961')]
+          def digest(b): return hashlib.sha256(b).hexdigest()
+          for names, checksum in bundles:
+              pieces = [Path('release') / name for name in names]
+              data = base64.b64decode(''.join(''.join(p.read_text().split()) for p in pieces), validate=True)
+              assert digest(data) == checksum
+              with zipfile.ZipFile(io.BytesIO(data)) as archive:
+                  manifest = json.loads(archive.read('manifest.json'))
+                  for name, (before, after) in manifest.items():
+                      path = PurePosixPath(name)
+                      assert path.parts[0] == 'docs' and '..' not in path.parts and len(path.parts) > 1
+                      target = Path(path)
+                      assert (digest(target.read_bytes()) if target.is_file() else None) == before, name
+                      if after is None:
+                          target.unlink()
+                      else:
+                          content = archive.read(name)
+                          assert digest(content) == after
+                          target.parent.mkdir(parents=True, exist_ok=True)
+                          target.write_bytes(content)
+              for piece in pieces: piece.unlink()
+          PYTHON
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A -- docs release
+          git diff --cached --check
+          git commit -m 'Expand the social, film and interiors portfolios with approved work'
+          git push origin HEAD:main
