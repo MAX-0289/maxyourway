@@ -1,0 +1,38 @@
+.client-wall { padding-block: clamp(26px, 5vw, 74px); }
+.logo-page-title {
+  position: absolute;
+  height: 1px; width: 1px;
+  overflow: hidden; clip-path: inset(50%);
+  white-space: nowrap;
+}
+.client-marks {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 2px;
+}
+.client-marks li { min-width: 0; scroll-margin-top: 100px; }
+.client-mark {
+  display: flex;
+  align-items: center; justify-content: center;
+  width: 100%; height: clamp(130px,12.8vw,184px);
+  padding: 20px 12px;
+  background: #fff;
+}
+.client-mark.dark { background: #1c2b24; }
+.client-mark img {
+  width: 71%; max-width: 205px;
+  height: 66%; max-height: 80px;
+  object-fit: contain;
+}
+.client-mark.small-original img { max-width: 144px; }
+a.client-mark:focus-visible { outline-offset: -4px; }
+a.client-mark:hover img { transform: scale(1.035); }
+@media (max-width: 900px) { .client-marks { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+@media (max-width: 600px) {
+  .client-marks { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .client-mark { height: clamp(90px,24vw,132px); padding: 12px 6px; }
+  .client-mark img { width: 78%; max-height: 61px; height: 70%; }
+}
+@media (prefers-reduced-motion: no-preference) { .client-mark img { transition: transform .18s ease; } }
