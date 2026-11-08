@@ -1,0 +1,77 @@
+.live-section,
+.live-card {
+  scroll-margin-top: 94px;
+}
+.live-albums-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(26px, 4vw, 48px) clamp(18px, 3vw, 36px);
+}
+.live-card {
+  min-width: 0;
+}
+.live-strip {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 89%;
+  gap: 8px;
+  align-items: start;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  scrollbar-color: #8d978b transparent;
+  padding-bottom: 5px;
+}
+.live-figure {
+  margin: 0;
+  min-width: 0;
+  scroll-snap-align: start;
+}
+.live-figure:only-child {
+  grid-column: 1 / -1;
+}
+.live-figure a {
+  display: block;
+  cursor: zoom-in;
+}
+.live-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.live-hidden-caption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.live-card h3 {
+  margin: .8rem 0 .22rem;
+  font-size: clamp(19px, 1.85vw, 29px);
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+.live-card .live-event-name {
+  margin: .2rem 0 .35rem;
+  color: #535e50;
+  font-size: .9rem;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+.live-card .live-open {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+}
+.live-strip:focus-visible,
+.live-card a:focus-visible {
+  outline: 2px solid #758c43;
+  outline-offset: 2px;
+}
+@media (max-width: 720px) {
+  .live-albums-grid { grid-template-columns: 1fr; }
+  .live-strip { grid-auto-columns: 92%; }
+  .live-card .live-open { min-height: 44px; }
+}
