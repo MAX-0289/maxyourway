@@ -1,0 +1,7 @@
+.wed-set {scroll-margin-top:5.5rem}
+.wed-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,2vw,30px);align-items:start}
+.wed-photo {margin:0;min-width:0;scroll-margin-top:5rem}
+.wed-photo a {position:relative;display:block;aspect-ratio:1;background:#eeece4;overflow:hidden}
+.wed-photo img {position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain}
+.wed-photo figcaption {margin-top:.45rem;font-size:.85rem;line-height:1.45;color:#536051}
+@media(max-width:600px){.wed-grid {gap:12px 6px}.wed-photo figcaption{font-size:11px}.wed-set .library-heading {margin-bottom:12px}}
