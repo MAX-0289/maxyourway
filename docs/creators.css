@@ -1,0 +1,19 @@
+.creator-set + .creator-set { margin-top: clamp(2rem, 4vw, 4rem); }
+.creator-heading { display: flex; align-items: end; justify-content: space-between; flex-wrap: wrap; gap: .4rem 1rem; margin-bottom: .8rem; }
+.creator-set h3 { margin: 0; font-size: clamp(1.25rem, 2vw, 1.8rem); }
+.creator-heading p { margin: .18rem 0 0; color: #535e50; }
+.creator-account { color: inherit; font-size: .85rem; text-underline-offset: .2em; }
+.creator-frames { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 2rem) / 3); gap: 1rem; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity; }
+.creator-frames figure { margin: 0; min-width: 0; scroll-snap-align: start; }
+.creator-frames img, .creator-frames video { display: block; width: 100%; height: auto; }
+.creator-frames .photo-link { display: block; }
+@media (max-width: 680px) {
+  .creator-frames { grid-auto-columns: 82%; gap: .6rem; padding-bottom: .4rem; }
+  .creator-heading { align-items: baseline; }
+}
+.creator-accounts { display: flex; flex-wrap: wrap; gap: .45rem 1rem; }
+.creator-account { display: flex; flex-direction: column; line-height: 1.5; text-decoration: none; }
+.creator-account span { text-decoration: underline; }
+.creator-account strong { font-weight: 500; }
+.creator-frames figcaption:not([hidden]), .audience-date { margin: .45rem 0 0; color: #535e50; font-size: .85rem; }
+.audience-date { margin-top: 2rem; }
