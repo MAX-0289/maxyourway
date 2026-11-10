@@ -41,3 +41,11 @@
   left: auto;
   right: 12px;
 }
+
+#creator-nayamat_handa .creator-frames img,
+#creator-lexindaqrs .creator-frames img {
+  aspect-ratio: 4 / 5;
+}
+#photo-handa-skycab-post img { object-position: center top; }
+#photo-lex-tiktok img { object-position: center bottom; }
+#creator-rjsiu .creator-frames img { aspect-ratio: 9 / 16; object-fit: cover; }
