@@ -238,3 +238,48 @@ figure[id^="photo-"] { scroll-margin-top: 90px; }
 
 .mitco-guide {display:block;margin:.25rem 0 .7rem;color:#56604e;font-size:.85rem;}
 .mitco-shorts:focus-visible {outline: 2px solid #55624b;outline-offset:2px;}
+
+/* Shared spacing and resting edges for horizontal work galleries. */
+.reel-series .reel-row,
+.home-reels .home-reel-strip,
+.creator-set .creator-frames,
+.live-card .live-strip {
+  column-gap: clamp(12px, 1.25vw, 20px);
+  padding-inline: 0;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+:is(.reel-row, .home-reel-strip, .creator-frames, .live-strip) > :last-child {
+  scroll-snap-align: end;
+}
+
+/* A shared title row keeps the links level when one title wraps. */
+@supports (grid-template-rows: subgrid) {
+  :is(.reel-row, .home-reel-strip) > .reel-card {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: 1 / span 4;
+    row-gap: 0;
+    align-self: stretch;
+    align-items: start;
+  }
+}
+
+.creator-set .creator-frames {
+  align-items: start;
+  grid-auto-columns: calc((100% - 2 * clamp(12px, 1.25vw, 20px)) / 3);
+}
+
+#creator-nayamat_handa .creator-frames img { aspect-ratio: 1; object-fit: cover; }
+#creator-lexindaqrs .creator-frames img { aspect-ratio: 2 / 3; object-fit: cover; }
+.live-strip .live-figure img { aspect-ratio: 3 / 2; object-fit: cover; }
+
+@media (max-width: 680px) {
+  .creator-set .creator-frames { grid-auto-columns: 82%; }
+  .creator-set .creator-heading {
+    display: grid;
+    justify-content: start;
+    gap: .35rem;
+  }
+}
