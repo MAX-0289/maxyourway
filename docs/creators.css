@@ -17,3 +17,27 @@
 .creator-account strong { font-weight: 500; }
 .creator-frames figcaption:not([hidden]), .audience-date { margin: .45rem 0 0; color: #535e50; font-size: .85rem; }
 .audience-date { margin-top: 2rem; }
+
+#creator-skzk_yusuke .creator-frames img,
+#creator-skzk_yusuke .creator-frames video {
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+}
+
+/* Keep the Story from its account header through the last credit sticker. */
+#photo-yusuke-story img,
+#gallery-view .lightbox-frame img[src$="/yusuke-story.jpg"] {
+  object-position: center 39%;
+}
+
+#gallery-view .lightbox-frame img[src$="/yusuke-story.jpg"] {
+  width: min(589px, calc(100vw - 36px), calc((100svh - 164px) * 9 / 16));
+  height: auto;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+}
+
+#gallery-view:has(img[src$="/yusuke-story.jpg"]) > button {
+  left: auto;
+  right: 12px;
+}
