@@ -1,0 +1,61 @@
+@font-face {
+  font-family: Poppins;
+  src: url("assets/fonts/poppins-400.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("assets/fonts/poppins-500.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("assets/fonts/poppins-600.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("assets/fonts/poppins-700.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("assets/fonts/poppins-800.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans SC";
+  src: url("assets/fonts/noto-sans-sc.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  unicode-range: U+2E80-9FFF, U+FF00-FFEF;
+}
+@font-face {
+  font-family: "Noto Sans HK";
+  src: url("assets/fonts/noto-sans-hk.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  unicode-range: U+2E80-9FFF, U+FF00-FFEF;
+}
+:root {
+  --studio-type: Poppins, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+:root:lang(zh-Hant) {
+  --studio-type: Poppins, "Noto Sans HK", "PingFang HK", "Microsoft JhengHei", sans-serif;
+}
+body, :lang(zh-Hant) body { font-family: var(--studio-type); }
+.wordmark { font-family: Arial, sans-serif; }
+.reel-count, .reel-tools button, .reel-card .reel-time { font-family: var(--studio-type); }
+.ifbrand-wordmark { font-family: "ZY Daisy", var(--studio-type); font-weight: 400; }
