@@ -1,11 +1,9 @@
 const filters = [...document.querySelectorAll('[data-filter]')];
 const projects = [...document.querySelectorAll('[data-category]')];
-const featured = document.querySelector('.featured-projects');
 function filterProjects(category, updateUrl = false) {
   if (!filters.some(button => button.dataset.filter === category)) category = 'all';
   filters.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === category)));
   projects.forEach(project => { project.hidden = category !== 'all' && project.dataset.category !== category; });
-  featured.hidden = category !== 'all' && category !== 'social';
   if (updateUrl) {
     const url = new URL(location.href);
     if (category === 'all') url.searchParams.delete('category');

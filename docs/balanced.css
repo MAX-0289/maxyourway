@@ -10,7 +10,7 @@
 .hero .pill { padding:12px 22px; min-height:0; font-size:15px; width:210px; }
 .service-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; padding-block:44px 64px; }
 .service { display:block; min-width:0; }
-.service img { aspect-ratio:1.65; object-fit:cover; }
+.service img { aspect-ratio:16/9; object-fit:contain; background:#e8eae6; }
 .service:last-child img { object-position:center 36%; }
 .service h2 { display:flex; justify-content:space-between; align-items:center; margin:14px 0 4px; font-size:25px; letter-spacing:-.04em; line-height:1.35; }
 .service h2 span { font-size:22px; font-weight:400; }
@@ -25,15 +25,16 @@
 .photo-shortcuts { display:flex; flex-wrap:wrap; gap:12px 22px; margin-bottom:28px; padding:16px 0; border-top:1px solid #d4d7cb; border-bottom:1px solid #d4d7cb; font-size:13px; }
 .photo-shortcuts span { color:#68715f; }
 .photo-shortcuts a { text-decoration:underline; text-underline-offset:5px; }
-.projects { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:34px 24px; }
-.featured-projects { margin-bottom:32px; }
-.featured-projects[hidden] { display:none; }
-.project { min-width:0; }
+.projects { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:40px 32px; }
+.project { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); gap:20px; align-items:start; min-width:0; padding-block:20px; border-top:1px solid var(--line); }
 .project[hidden] { display:none; }
-.project-caption { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:12px; }
+.project-overview { min-width:0; }
+.project-caption { display:flex; align-items:start; justify-content:space-between; gap:10px; }
 .project-caption p { margin:0 0 4px; color:#646e5d; font-size:12px; }
-.project-caption h3 { margin:0; font-weight:600; font-size:19px; line-height:1.35; }
+.project-caption h3 { margin:0; font-weight:600; font-size:clamp(17px,1.4vw,22px); line-height:1.35; }
 .project-caption > span { font-size:24px; }
+.project-description { margin:12px 0 14px; font-size:13px; line-height:1.75; color:#50584f; }
+.project-open { display:inline-flex; gap:14px; min-height:44px; align-items:center; border-bottom:1px solid; font-size:12px; }
 .home-clients { padding-top:42px; padding-bottom:70px; border-top:1px solid #d4d7cb; }
 .home-clients .client-marks { grid-template-columns:repeat(6,minmax(0,1fr)); gap:1px; }
 .home-clients .client-mark { height:105px; padding:12px; background:#eeeee5; }
@@ -42,14 +43,16 @@
 .contact { border-top:1px solid #d4d7cb; padding-top:54px; }
 .contact h2 { font-size:clamp(32px,4vw,55px); }
 .footer { padding-block:18px; border-top:1px solid #d4d7cb; font-size:12px; }
-@media (hover:hover) and (prefers-reduced-motion:no-preference) { .service img { transition:transform .3s; } .service:hover img { transform:scale(1.02); } }
+@media(max-width:1100px) {
+ .projects { grid-template-columns:1fr; gap:20px; }
+ .project { grid-template-columns:minmax(0,1.4fr) minmax(0,1fr); gap:28px; }
+ .project-description { font-size:14px; }
+}
 @media(max-width:900px) {
  .wrap { width:calc(100% - 40px); }
  .service-grid { gap:16px; }
  .service h2 { font-size:21px; }
  .service p { font-size:12px; }
- .projects { grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 18px; }
- .featured-projects { grid-template-columns:repeat(3,minmax(0,1fr)); }
  .home-clients .client-marks { grid-template-columns:repeat(4,minmax(0,1fr)); }
 }
 @media(max-width:600px) {
@@ -63,7 +66,6 @@
  .hero-panorama { grid-template-columns:repeat(3,1fr); }
  .hero .eyebrow { font-size:9px; letter-spacing:.12em; }
  .service-grid { gap:10px; padding-block:22px 40px; }
- .service img { aspect-ratio:3/4; }
  .service h2 { font-size:17px; letter-spacing:-.05em; margin:9px 0 0; }
  .service h2 span { font-size:16px; }
  .service p { display:none; }
@@ -72,9 +74,9 @@
  .work-filters button { padding:8px 12px; font-size:13px; }
  .photo-shortcuts { gap:11px 15px; font-size:12px; margin-bottom:20px; }
  .photo-shortcuts span { display:none; }
- .projects { gap:26px 12px; }
- .featured-projects { grid-template-columns:1fr; margin-bottom:24px; }
- .project-caption h3 { font-size:15px; }
+ .projects { gap:12px; }
+ .project { grid-template-columns:1fr; gap:16px; }
+ .project-caption h3 { font-size:22px; }
  .project-caption p { font-size:11px; margin:0 0 3px; }
  .project-caption > span { font-size:18px; }
  .home-clients { padding-top:30px; padding-bottom:40px; }
