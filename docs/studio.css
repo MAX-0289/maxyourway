@@ -155,7 +155,6 @@
   scroll-margin-top: 95px;
 }
 .studio-service-row h3 { font-size: clamp(19px, 2.7vw, 31px); margin: 0; line-height: 1.25; }
-.studio-price { font-size: 14px; font-weight: 600; margin: 8px 0 0; }
 .studio-service-description { font-size: 16px; line-height: 1.6; margin: 0; }
 .studio-scope { font-size: 14px; color: #4f594f; margin: 8px 0 0; }
 .studio-service-contact { border-top: 1px solid var(--line); padding-block: 32px 66px; }
@@ -202,3 +201,12 @@
 .film-versions figcaption {margin-top:12px;font-weight:600;}
 .film-versions .duration {font-size:13px;color:#50584f;}
 .film-versions .studio-link {margin-top:4px;}
+
+.studio-deliverables { padding-left:1.2em; margin:16px 0 0; color:#50584f; font-size:14px; line-height:1.85; }
+.studio-deliverables li + li { margin-top:9px; }
+.studio-services-hero nav { margin-left:0; }
+@media (max-width:360px) {
+ .main-header { padding-inline:8px; gap:3px; }
+ .main-header .nav-end { gap:2px; }
+ .main-header .small-cta { padding-inline:6px; }
+}

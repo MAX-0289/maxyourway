@@ -89,3 +89,20 @@
 .hero .pill { gap:12px; }
 .nav-menu > summary { list-style:none; }
 .nav-menu > summary::-webkit-details-marker { display:none; }
+
+.home-services { padding-block:clamp(32px,4vw,56px); scroll-margin-top:100px; }
+.home-services .service-grid { padding:0; }
+.home-services .service h3 { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin:16px 0 12px; font-size:clamp(20px,1.9vw,27px); line-height:1.4; font-weight:500; }
+.home-services .service-arrow { flex:none; }
+.home-services .service p { display:block; font-size:14px; line-height:1.8; color:#50584f; }
+.service-summary { padding:0; margin:16px 0 0; list-style:none; border-top:1px solid var(--line); }
+.service-summary li { padding-top:9px; font-size:13px; line-height:1.7; }
+@media (max-width:650px) {
+ .home-services .service-grid { grid-template-columns:1fr; gap:30px; }
+ .home-services .service h3 { font-size:23px; margin:13px 0 8px; }
+ .home-services .service p { font-size:14px; }
+ .service-summary { margin-top:12px; }
+}
+@media (max-width:360px) {
+ html[lang="en"] .hero-copy h1 { font-size:34px; letter-spacing:-1px; }
+}
