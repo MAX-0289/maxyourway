@@ -1,0 +1,32 @@
+.exhibition-photos > h2,
+.exhibition-film > h2 {
+  margin: 0 0 24px;
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.3;
+}
+.exhibition-photos > .event-gallery {
+  width: 100%;
+  margin: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.exhibition-film {
+  padding-block: 36px 42px;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 110px;
+}
+.exhibition-film .film-versions { max-width: 1080px; }
+.exhibition-film video { display: block; width: 100%; background: #202420; }
+@media (max-width: 650px) {
+  .exhibition-photos > .event-gallery { grid-template-columns: 1fr; }
+  .exhibition-film { padding-block: 24px; }
+}
+.exhibition-news { padding-block: 8px 36px; }
+.exhibition-news > h2 { font-size: 21px; margin: 0 0 18px; }
+.exhibition-news-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.exhibition-news-grid > a { position: relative; display: flex; flex-direction: column; align-items: start; padding: 22px 42px 22px 20px; border: 1px solid var(--line); transition: border-color .2s; }
+.exhibition-news-grid > a:hover { border-color: currentColor; }
+.exhibition-publisher { margin: 0 0 12px; font-size: 12px; color: #626b60; }
+.exhibition-news-grid h3 { margin: 0 0 18px; font-size: 16px; line-height: 1.6; font-weight: 500; }
+.exhibition-news-grid time { margin-top: auto; font-size: 12px; color: #626b60; }
+.exhibition-news-arrow { position: absolute; right: 16px; top: 20px; font-size: 21px; }
+@media (max-width: 650px) { .exhibition-news-grid { grid-template-columns: 1fr; gap: 12px; } }
