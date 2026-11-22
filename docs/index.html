@@ -1,183 +1,756 @@
-<!DOCTYPE html>
-
-<html data-title-en="MaxYourWay — Photography, Film &amp; Social Media" data-title-zh="MaxYourWay — 影像与品牌内容" data-title-zh-hant="MaxYourWay — 影像與品牌內容" lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>MaxYourWay — 影像与品牌内容</title><link href="style.css" rel="stylesheet"/><link href="clients.css" rel="stylesheet"/><link href="balanced.css" rel="stylesheet"/><link href="assets/maxyourway-ink.png" rel="icon"/><link href="studio.css" rel="stylesheet"/><link href="typography.css" rel="stylesheet"/></head><body><a class="skip" data-en="Skip to content" data-zh="跳到内容" data-zh-hant="跳到內容" href="#main">跳到内容</a><header class="main-header"><a aria-label="MaxYourWay" class="wordmark" href="index.html#top"><img alt="" class="signature-symbol" src="assets/maxyourway-ink.png"/>Max<span>Your</span>Way</a><nav aria-label="MaxYourWay" class="desktop-nav"><a data-en="Work" data-zh="作品" data-zh-hant="作品" href="index.html#work">作品</a><a data-en="Social media" data-set="social" data-zh="社媒营销" data-zh-hant="社媒營銷" href="#work">社媒营销</a><a data-en="Photography" data-set="photography" data-zh="摄影" data-zh-hant="攝影" href="#work">摄影</a><a data-en="Films" data-set="films" data-zh="宣传片" data-zh-hant="宣傳片" href="#work">宣传片</a><a data-en="Clients" data-zh="企业合作" data-zh-hant="企業合作" href="clients.html">企业合作</a><a data-en="Services" data-zh="服务" data-zh-hant="服務" href="services.html">服务</a></nav><div class="nav-end"><details class="nav-menu"><summary><span data-en="Menu" data-zh="菜单" data-zh-hant="菜單">菜单</span></summary><nav aria-label="MaxYourWay"><a data-en="Work" data-zh="作品" data-zh-hant="作品" href="index.html#work">作品</a><a data-en="Social media" data-set="social" data-zh="社媒营销" data-zh-hant="社媒營銷" href="#work">社媒营销</a><a data-en="Photography" data-set="photography" data-zh="摄影" data-zh-hant="攝影" href="#work">摄影</a><a data-en="Films" data-set="films" data-zh="宣传片" data-zh-hant="宣傳片" href="#work">宣传片</a><a data-en="Clients" data-zh="企业合作" data-zh-hant="企業合作" href="clients.html">企业合作</a><a data-en="Services" data-zh="服务" data-zh-hant="服務" href="services.html">服务</a><a data-en="About the studio" data-zh="关于工作室" data-zh-hant="關於工作室" href="index.html#about">关于工作室</a></nav></details><div aria-label="语言 / Language" class="studio-languages" data-aria-label-zh="语言 / Language" data-aria-label-zh-hant="語言 / Language" role="group">
-<button aria-label="简体中文" aria-pressed="true" data-lang="zh" lang="zh-CN" type="button">简体</button>
-<button aria-label="繁體中文" aria-pressed="false" data-lang="zhHant" lang="zh-Hant" type="button">繁體</button>
-<button aria-label="English" aria-pressed="false" data-lang="en" lang="en" type="button">EN</button>
-</div><a class="small-cta" data-en="Contact ↗" data-zh="项目咨询 ↗" data-zh-hant="項目查詢 ↗" href="index.html#contact">项目咨询 ↗</a></div></header><main id="main"><section class="hero" id="top"><div class="hero-panorama">
-<figure class="panorama-frame frame-macau">
-<picture><source media="(max-width:600px) and (orientation:portrait)" srcset="assets/macau-felicidade-phone.webp"/><img alt="澳门福隆新街的绿色百叶窗与红灯笼" data-alt-zh="澳门福隆新街的绿色百叶窗与红灯笼" data-alt-zh-hant="澳門福隆新街的綠色百葉窗與紅燈籠" fetchpriority="high" height="1590" src="assets/macau-felicidade.webp" width="1060"/></picture>
-<figcaption><span data-en="MACAU" data-zh="澳门" data-zh-hant="澳門">澳门</span></figcaption>
+<!doctype html>
+<html lang="zh-CN" data-title-zh="MaxYourWay — 商业摄影、影片与社媒内容" data-title-zh-hant="MaxYourWay — 商業攝影、影片與社媒內容" data-title-en="MaxYourWay — Photography, Films & Social Content">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="MaxYourWay 商业影像工作室，为酒店、品牌及机构提供商业摄影、品牌影片与社交媒体内容策划制作。"/>
+<title>MaxYourWay — 商业摄影、影片与社媒内容</title>
+<link rel="icon" href="assets/maxyourway-ink.png"/>
+<link rel="preload" href="assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="stylesheet" href="typography.css"/>
+<link rel="stylesheet" href="c-home.css"/>
+</head>
+<body class="home-c">
+<a class="skip" href="#main">
+<span class="" data-zh="跳到正文" data-zh-hant="跳至正文" data-en="Skip to content" >跳到正文</span>
+</a>
+<header class="site-header">
+<a class="brand" href="index.html#top" aria-label="MaxYourWay">
+<img src="assets/maxyourway-ink.png" alt="" width="32" height="32"/>
+<strong>Max<span>Your</span>Way</strong>
+</a>
+<nav class="primary-nav" aria-label="主导航">
+<a href="#services" class="">
+<span class="" data-zh="服务" data-zh-hant="服務" data-en="Services" >服务</span>
+</a>
+<a href="#photography" class="">
+<span class="" data-zh="摄影" data-zh-hant="攝影" data-en="Photography" >摄影</span>
+</a>
+<a href="films.html" class="">
+<span class="" data-zh="影片" data-zh-hant="影片" data-en="Films" >影片</span>
+</a>
+<a href="#work" class="">
+<span class="" data-zh="精选项目" data-zh-hant="精選項目" data-en="Selected work" >精选项目</span>
+</a>
+<a href="#about" class="">
+<span class="" data-zh="工作室" data-zh-hant="工作室" data-en="Studio" >工作室</span>
+</a>
+</nav>
+<div class="header-tools">
+<div class="languages" role="group" aria-label="Language">
+<button type="button" data-lang="zh" aria-pressed="true">简体</button>
+<button type="button" data-lang="zhHant" aria-pressed="false">繁體</button>
+<button type="button" data-lang="en" aria-pressed="false">EN</button>
+</div>
+<a href="#contact" class="contact-link">
+<span class="" data-zh="项目咨询" data-zh-hant="項目諮詢" data-en="Let’s talk" >项目咨询</span>
+</a>
+<details class="nav-menu">
+<summary aria-label="打开菜单" data-aria-label-zh="打开菜单" data-aria-label-zh-hant="開啟選單" data-aria-label-en="Open menu">
+<span>
+</span>
+<span>
+</span>
+</summary>
+<nav aria-label="移动导航">
+<a href="#services" class="">
+<span class="" data-zh="服务" data-zh-hant="服務" data-en="Services" >服务</span>
+</a>
+<a href="#photography" class="">
+<span class="" data-zh="摄影" data-zh-hant="攝影" data-en="Photography" >摄影</span>
+</a>
+<a href="films.html" class="">
+<span class="" data-zh="影片" data-zh-hant="影片" data-en="Films" >影片</span>
+</a>
+<a href="#work" class="">
+<span class="" data-zh="精选项目" data-zh-hant="精選項目" data-en="Selected work" >精选项目</span>
+</a>
+<a href="#about" class="">
+<span class="" data-zh="工作室" data-zh-hant="工作室" data-en="Studio" >工作室</span>
+</a>
+<a href="clients.html" class="">
+<span class="" data-zh="合作品牌" data-zh-hant="合作品牌" data-en="Clients" >合作品牌</span>
+</a>
+<a href="#contact" class="">
+<span class="" data-zh="项目咨询" data-zh-hant="項目諮詢" data-en="Get in touch" >项目咨询</span>
+</a>
+</nav>
+</details>
+</div>
+<nav class="mobile-shortcuts" aria-label="快捷入口">
+<a href="#services" class="">
+<span class="" data-zh="服务内容" data-zh-hant="服務內容" data-en="Services" >服务内容</span>
+</a>
+<a href="#photography" class="">
+<span class="" data-zh="摄影作品" data-zh-hant="攝影作品" data-en="Photography" >摄影作品</span>
+</a>
+<a href="films.html" class="">
+<span class="" data-zh="影片作品" data-zh-hant="影片作品" data-en="Films" >影片作品</span>
+</a>
+</nav>
+</header>
+<main id="main">
+<section class="hero" id="top" aria-labelledby="hero-heading">
+<div class="hero-panels">
+<figure class="hero-panel" tabindex="0">
+<picture>
+<source media="(max-width:600px)" srcset="assets/macau-felicidade-phone.webp"/>
+<img src="assets/macau-felicidade.webp" alt="澳门福隆新街的绿色百叶窗与红灯笼" width="1060" height="1590" fetchpriority="high"/>
+</picture>
+<figcaption>MACAO</figcaption>
+<img class="hero-mark" src="assets/maxyourway-ink.png" alt="" width="26" height="26"/>
 </figure>
-<figure class="panorama-frame">
-<picture><source media="(max-width:600px) and (orientation:portrait)" srcset="assets/hong-kong-tram-phone.webp"/><img alt="浅蓝色双层电车沿香港街道的轨道驶来" data-alt-zh="浅蓝色双层电车沿香港街道的轨道驶来" data-alt-zh-hant="淺藍色雙層電車沿香港街道的軌道駛來" fetchpriority="high" height="1590" src="assets/hong-kong-tram.webp" width="1060"/></picture>
-<figcaption><span data-en="HONG KONG" data-zh="香港" data-zh-hant="香港">香港</span></figcaption>
+<figure class="hero-panel" tabindex="0">
+<picture>
+<source media="(max-width:600px)" srcset="assets/hong-kong-tram-phone.webp"/>
+<img src="assets/hong-kong-tram.webp" alt="浅蓝色双层电车沿香港街道驶来" width="1060" height="1590" fetchpriority="high"/>
+</picture>
+<figcaption>HONG KONG</figcaption>
+<img class="hero-mark" src="assets/maxyourway-ink.png" alt="" width="26" height="26"/>
 </figure>
-<figure class="panorama-frame frame-italy">
-<picture><source media="(max-width:600px) and (orientation:portrait)" srcset="assets/rome-trevi-phone.webp"/><img alt="罗马特雷维喷泉与立面中央的雕像" data-alt-zh="罗马特雷维喷泉与立面中央的雕像" data-alt-zh-hant="羅馬特雷維噴泉與立面中央的雕像" fetchpriority="high" height="1590" src="assets/rome-trevi.webp" width="1060"/></picture>
-<figcaption><span data-en="ITALY" data-zh="意大利" data-zh-hant="意大利">意大利</span></figcaption>
+<figure class="hero-panel" tabindex="0">
+<picture>
+<source media="(max-width:600px)" srcset="assets/rome-trevi-phone.webp"/>
+<img src="assets/rome-trevi.webp" alt="罗马特雷维喷泉与建筑立面" width="1060" height="1590" fetchpriority="high"/>
+</picture>
+<figcaption>ROME</figcaption>
+<img class="hero-mark" src="assets/maxyourway-ink.png" alt="" width="26" height="26"/>
 </figure>
-</div><div class="hero-copy"><p class="eyebrow" data-en="PHOTOGRAPHY · FILM · SOCIAL MEDIA" data-zh="社媒营销 · 商业摄影 · 宣传片" data-zh-hant="社媒營銷 · 商業攝影 · 宣傳片">社媒营销 · 商业摄影 · 宣传片</p><h1><span data-en="Stories seen." data-zh="让人看见，" data-zh-hant="讓人看見，">让人看见，</span><br/><em data-en="Brands remembered." data-zh="也让人记住。" data-zh-hant="也讓人記住。">也让人记住。</em></h1><p class="hero-intro" data-en="Social media content, commercial photography and films for brands, hotels and events." data-zh="为品牌、酒店和活动制作社交媒体内容、商业摄影与宣传片。" data-zh-hant="為品牌、酒店和活動製作社交媒體內容、商業攝影與宣傳片。">为品牌、酒店和活动制作社交媒体内容、商业摄影与宣传片。</p><a class="pill" href="#work"><span data-en="Explore our work" data-zh="浏览精选作品" data-zh-hant="瀏覽精選作品">浏览精选作品</span><span>↗</span></a></div><div class="hero-bottom"><span data-en="BASED IN ZHONGSHAN · GREATER BAY AREA" data-zh="立足中山 · 连接大湾区" data-zh-hant="立足中山 · 連接大灣區">立足中山 · 连接大湾区</span><span data-en="SCROLL TO EXPLORE ↓" data-zh="向下浏览 ↓" data-zh-hant="向下瀏覽 ↓">向下浏览 ↓</span></div></section>
-<section aria-labelledby="services-heading" class="wrap home-services" id="services"><div class="section-head"><h2 data-en="Services" data-zh="服务" data-zh-hant="服務" id="services-heading">服务</h2><a data-en="Explore services ↗" data-zh="了解服务 ↗" data-zh-hant="了解服務 ↗" href="services.html">了解服务 ↗</a></div><div class="service-grid"><a class="service" href="services.html#social-services"><img alt="" loading="lazy" src="assets/creators/lex-published-1.webp"/><div><h3><span data-en="Social media content" data-zh="社媒内容策划与制作" data-zh-hant="社媒內容策劃與製作">社媒内容策划与制作</span><span aria-hidden="true" class="service-arrow">↗</span></h3><p data-en="From channel reviews and monthly planning to shoots and publishing, we create content for your brand throughout the year." data-zh="从账号内容梳理到月度选题、实拍与发布，让品牌持续有内容可用。" data-zh-hant="由帳號內容梳理到每月選題、實拍及發佈，為品牌持續製作內容。">从账号内容梳理到月度选题、实拍与发布，让品牌持续有内容可用。</p><ul class="service-summary"><li data-en="Short films, carousels &amp; bilingual copy" data-zh="短片、轮播与双语文案" data-zh-hant="短片、輪播及雙語文案">短片、轮播与双语文案</li><li data-en="Instagram, Facebook &amp; Xiaohongshu versions" data-zh="Instagram、Facebook 与小红书适配" data-zh-hant="Instagram、Facebook 及小紅書版本">Instagram、Facebook 与小红书适配</li><li data-en="Publishing schedules &amp; content reviews" data-zh="发布排期与内容复盘" data-zh-hant="發佈排期及內容檢視">发布排期与内容复盘</li></ul></div></a><a class="service" href="services.html#photo-services"><img alt="" loading="lazy" src="assets/spaces/pousada-suite-bedroom.webp"/><div><h3><span data-en="Commercial photography" data-zh="商业摄影" data-zh-hant="商業攝影">商业摄影</span><span aria-hidden="true" class="service-arrow">↗</span></h3><p data-en="Photography of interiors, products, food and people for websites, online stores, booking platforms and social channels." data-zh="为官网、电商、预订平台和社交媒体拍摄空间、商品、餐饮与人物。" data-zh-hant="為官網、網店、預訂平台及社交媒體拍攝空間、商品、餐飲及人物。">为官网、电商、预订平台和社交媒体拍摄空间、商品、餐饮与人物。</p><ul class="service-summary"><li data-en="Guest rooms, interiors &amp; surroundings" data-zh="客房、室内与环境摄影" data-zh-hant="客房、室內及環境攝影">客房、室内与环境摄影</li><li data-en="Product images, use scenarios &amp; details" data-zh="商品主图、使用场景与细节" data-zh-hant="商品主圖、使用場景及細節">商品主图、使用场景与细节</li><li data-en="Events, portraits &amp; live photo galleries" data-zh="活动纪实、形象照与相片直播" data-zh-hant="活動紀錄、形象照及相片直播">活动纪实、形象照与相片直播</li></ul></div></a><a class="service" href="services.html#film-services"><img alt="主厨站在画面中央，抱臂看向镜头" loading="lazy" src="assets/library/crowne-chef-centred-cover.webp"/><div><h3><span data-en="Brand films" data-zh="宣传片与品牌影片" data-zh-hant="宣傳片與品牌影片">宣传片与品牌影片</span><span aria-hidden="true" class="service-arrow">↗</span></h3><p data-en="Brand stories, product features and demonstrations, told through people and real locations." data-zh="通过人物、商品与真实场景，讲清品牌故事、功能特点和使用方式。" data-zh-hant="透過人物、商品及真實場景，呈現品牌故事、功能特點及使用方式。">通过人物、商品与真实场景，讲清品牌故事、功能特点和使用方式。</p><ul class="service-summary"><li data-en="Corporate, hospitality &amp; profile films" data-zh="企业、酒店与人物专题" data-zh-hant="企業、酒店及人物專題">企业、酒店与人物专题</li><li data-en="Product, assembly &amp; how-to films" data-zh="商品演示、装配与使用影片" data-zh-hant="商品示範、裝配及使用影片">商品演示、装配与使用影片</li><li data-en="Existing-footage edits &amp; format adaptation" data-zh="现有素材再创作与横竖版剪辑" data-zh-hant="現有素材再創作及橫直版剪接">现有素材再创作与横竖版剪辑</li></ul></div></a></div></section><section class="wrap works" id="work"><span class="media-anchor" data-filter-alias="all" id="featured-cases"></span><span class="media-anchor" data-filter-alias="social" id="social-marketing"></span><div class="section-head"><h2 data-en="Selected work" data-zh="精选作品" data-zh-hant="精選作品">精选作品</h2><a class="all-projects" data-en="All services ↗" data-zh="全部服务 ↗" data-zh-hant="全部服務 ↗" href="services.html">全部服务 ↗</a></div>
-<div aria-label="作品分类" class="work-filters" data-aria-label-zh="作品分类" data-aria-label-zh-hant="作品分類" role="group"><button aria-pressed="true" data-en="All work" data-filter="all" data-zh="全部作品" data-zh-hant="全部作品" type="button">全部作品</button><button aria-pressed="false" data-en="Social media" data-filter="social" data-zh="社媒营销" data-zh-hant="社媒營銷" type="button">社媒营销</button><button aria-pressed="false" data-en="Photography" data-filter="photography" data-zh="商业摄影" data-zh-hant="商業攝影" type="button">商业摄影</button><button aria-pressed="false" data-en="Films" data-filter="films" data-zh="宣传片" data-zh-hant="宣傳片" type="button">宣传片</button></div>
-<nav aria-label="摄影分类" class="photo-shortcuts" data-aria-label-zh="摄影分类" data-aria-label-zh-hant="攝影分類"><span data-en="Photography" data-zh="摄影" data-zh-hant="攝影">摄影</span><a data-en="Spaces ↗" data-zh="空间 ↗" data-zh-hant="空間 ↗" href="photography.html#spaces">空间 ↗</a><a data-en="Food &amp; product ↗" data-zh="餐饮与产品 ↗" data-zh-hant="餐飲與產品 ↗" href="photography.html#products">餐饮与产品 ↗</a><a data-en="Events &amp; live photo ↗" data-zh="活动与图片直播 ↗" data-zh-hant="活動與圖片直播 ↗" href="photography.html#live-albums">活动与图片直播 ↗</a><a data-en="Stage &amp; festivals ↗" data-zh="演出与电影节 ↗" data-zh-hant="演出與電影節 ↗" href="photography.html#performances">演出与电影节 ↗</a><a data-en="Portraits ↗" data-zh="人物 ↗" data-zh-hant="人物 ↗" href="photography.html#people">人物 ↗</a><a data-en="Weddings ↗" data-zh="婚礼与约拍 ↗" data-zh-hant="婚禮與約拍 ↗" href="photography.html#weddings">婚礼与约拍 ↗</a></nav>
-<div class="projects"><article class="project" data-category="social">
-<div class="studio-flip">
-<div class="studio-flip-inner">
-<div class="studio-flip-front"><img alt="澳门国际机场停机坪上的澳门航空客机" data-alt-en="Air Macau aircraft on the apron at Macao International Airport" data-alt-zh="澳门国际机场停机坪上的澳门航空客机" data-alt-zh-hant="澳門國際機場停機坪上的澳門航空客機" decoding="async" loading="lazy" src="assets/social/air-macau-airport-cover.webp"/></div>
-<div class="studio-flip-back" inert=""><img alt="澳门航空模拟驾驶舱" data-alt-en="Air Macau flight training simulator" data-alt-zh="澳门航空模拟驾驶舱" data-alt-zh-hant="澳門航空模擬駕駛艙" decoding="async" loading="lazy" src="assets/social/air-macau-cockpit-cover.webp"/><a class="studio-back-link" data-en="View project" data-zh="查看项目" data-zh-hant="查看項目" href="air-macau.html">查看项目</a></div>
 </div>
-<a class="studio-cover-link" data-en="Air Macau" data-zh="澳门航空" data-zh-hant="澳門航空" href="air-macau.html">澳门航空</a><button aria-pressed="false" class="studio-flip-toggle" data-en="Flip cover" data-zh="翻转封面" data-zh-hant="翻轉封面" type="button">翻转封面</button>
+<div class="hero-content">
+<p class="eyebrow">A COMMERCIAL IMAGE STUDIO</p>
+<h1 id="hero-heading">Different places.<br/>One clear vision.</h1>
+<p class="hero-intro" data-zh="为酒店、品牌与机构制作摄影、影片及社交媒体内容。" data-zh-hant="為酒店、品牌與機構製作攝影、影片及社交媒體內容。" data-en="Photography, films and social content for hotels, brands and organisations." >为酒店、品牌与机构制作摄影、影片及社交媒体内容。</p>
+<div class="hero-actions">
+<a href="#services" class="button button-light">
+<span class="" data-zh="查看服务" data-zh-hant="查看服務" data-en="Explore services" >查看服务</span>
+</a>
+<a href="#photography" class="button button-outline">
+<span class="" data-zh="浏览摄影作品" data-zh-hant="瀏覽攝影作品" data-en="Explore photography" >浏览摄影作品</span>
+</a>
 </div>
-<div class="project-overview"><a class="project-caption project-case" href="air-macau.html"><div><p data-en="100 destination shorts" data-zh="100 条目的地短片" data-zh-hant="100 條目的地短片">100 条目的地短片</p><h3 data-en="Air Macau" data-zh="澳门航空" data-zh-hant="澳門航空">澳门航空</h3></div><span aria-hidden="true">↗</span></a><p class="project-description" data-en="100 destination and route shorts for Air Macau, covering inaugural flights, boarding-pass offers and experiences in Macao." data-zh="为澳门航空制作 100 条目的地及航线短片，涵盖首航活动、登机牌礼遇与在澳体验。" data-zh-hant="為澳門航空製作 100 條目的地及航線短片，涵蓋首航活動、登機牌禮遇與在澳體驗。">为澳门航空制作 100 条目的地及航线短片，涵盖首航活动、登机牌礼遇与在澳体验。</p><a class="project-open" data-en="View project ↗" data-zh="查看项目 ↗" data-zh-hant="查看項目 ↗" href="air-macau.html">查看项目 ↗</a></div></article><article class="project" data-category="social">
-<div class="studio-flip">
-<div class="studio-flip-inner">
-<div class="studio-flip-front"><img alt="意大利阿布鲁佐山村航拍" data-alt-en="An aerial view of a hillside village in Abruzzo, Italy" data-alt-zh="意大利阿布鲁佐山村航拍" data-alt-zh-hant="意大利阿布魯佐山村航拍" decoding="async" loading="lazy" src="assets/social/mitco-italy-aerial-cover.webp"/></div>
-<div class="studio-flip-back" inert=""><img alt="阿布鲁佐山村与教堂航拍" data-alt-en="An Abruzzo hillside village and church from the air" data-alt-zh="阿布鲁佐山村与教堂航拍" data-alt-zh-hant="阿布魯佐山村與教堂航拍" decoding="async" loading="lazy" src="assets/social/mitco-italy-village-cover.webp"/><a class="studio-back-link" data-en="View project" data-zh="查看项目" data-zh-hant="查看項目" href="mitco.html">查看项目</a></div>
 </div>
-<a class="studio-cover-link" data-en="MITCO" data-zh="MITCO · 意乡人" data-zh-hant="MITCO · 意鄉人" href="mitco.html">MITCO · 意乡人</a><button aria-pressed="false" class="studio-flip-toggle" data-en="Flip cover" data-zh="翻转封面" data-zh-hant="翻轉封面" type="button">翻转封面</button>
+<div class="hero-footer">
+<span>MACAO · HONG KONG · ROME</span>
+<span class="" data-zh="摄影 / 影片 / 社媒内容" data-zh-hant="攝影 / 影片 / 社媒內容" data-en="Photography / Films / Social content" >摄影 / 影片 / 社媒内容</span>
 </div>
-<div class="project-overview"><a class="project-caption project-case" href="mitco.html"><div><p data-en="Cross-border social retainer" data-zh="跨境社媒月度合作" data-zh-hant="跨境社媒月度合作">跨境社媒月度合作</p><h3 data-en="MITCO" data-zh="MITCO · 意乡人" data-zh-hant="MITCO · 意鄉人">MITCO · 意乡人</h3></div><span aria-hidden="true">↗</span></a><p class="project-description" data-en="An ongoing cross-border retainer covering property, education and lifestyle, with bilingual planning, filming guidance, post-production, graphics and multi-platform publishing." data-zh="跨境社媒月度合作。围绕意大利房产、教育及生活方式，提供双语内容策划、拍摄指引、剪辑调色、图文制作与多平台发布安排。" data-zh-hant="跨境社媒月度合作。圍繞意大利物業、教育及生活方式，提供雙語內容策劃、拍攝指引、剪接調色、圖文製作及多平台發佈安排。">跨境社媒月度合作。围绕意大利房产、教育及生活方式，提供双语内容策划、拍摄指引、剪辑调色、图文制作与多平台发布安排。</p><a class="project-open" data-en="View project ↗" data-zh="查看项目 ↗" data-zh-hant="查看項目 ↗" href="mitco.html">查看项目 ↗</a></div></article><article class="project project--portrait" data-category="social">
-<div class="studio-flip studio-flip--portrait">
-<div class="studio-flip-inner">
-<div class="studio-flip-front"><img alt="康礎 MRI 科普影片的 IG 竖屏封面" data-alt-en="Basic Life’s portrait Instagram cover for its MRI film" data-alt-zh="康礎 MRI 科普影片的 IG 竖屏封面" data-alt-zh-hant="康礎 MRI 科普影片的 IG 直向封面" decoding="async" loading="lazy" src="assets/social/basic-life-ig-cover.webp"/></div>
-<div class="studio-flip-back" inert=""><img alt="康礎 Instagram 公开影片截图" data-alt-en="A screenshot of Basic Life’s published Instagram film" data-alt-zh="康礎 Instagram 公开影片截图" data-alt-zh-hant="康礎 Instagram 公開影片截圖" decoding="async" loading="lazy" src="assets/social/basic-life-ig-public.jpg"/><a class="studio-back-link" data-en="View project" data-zh="查看项目" data-zh-hant="查看項目" href="basic-life.html">查看项目</a></div>
+</section>
+<section class="section services" id="services" aria-labelledby="services-heading">
+<div class="section-heading">
+<div>
+<p class="eyebrow">WHAT WE DO</p>
+<h2 id="services-heading" class="" data-zh="服务内容" data-zh-hant="服務內容" data-en="Services" >服务内容</h2>
 </div>
-<a class="studio-cover-link" data-en="Basic Life" data-zh="康礎 Basic Life" data-zh-hant="康礎 Basic Life" href="basic-life.html">康礎 Basic Life</a><button aria-pressed="false" class="studio-flip-toggle" data-en="Flip cover" data-zh="翻转封面" data-zh-hant="翻轉封面" type="button">翻转封面</button>
+<div class="section-heading-side">
+<p class="" data-zh="从一次拍摄，到持续内容合作。" data-zh-hant="從一次拍攝，到持續內容合作。" data-en="From a single shoot to an ongoing content partnership." >从一次拍摄，到持续内容合作。</p>
+<a href="services.html" class="text-link">
+<span class="" data-zh="完整服务介绍" data-zh-hant="完整服務介紹" data-en="All services" >完整服务介绍</span>
+</a>
 </div>
-<div class="project-overview"><a class="project-caption project-case" href="basic-life.html"><div><p data-en="9 Cantonese physiotherapy shorts" data-zh="9 条粤语物理治疗短片" data-zh-hant="9 條粵語物理治療短片">9 条粤语物理治疗短片</p><h3 data-en="Basic Life" data-zh="康礎 Basic Life" data-zh-hant="康礎 Basic Life">康礎 Basic Life</h3></div><span aria-hidden="true">↗</span></a><p class="project-description" data-en="A Cantonese social video series for Basic Life, combining physiotherapy demonstrations and everyday health topics with Traditional Chinese subtitles." data-zh="为康礎制作粤语社媒系列影片，以物理治疗示范及日常健康问题为主题，配合繁体字幕，供品牌持续发布。" data-zh-hant="為康礎製作粵語社媒系列影片，以物理治療示範及日常健康問題為主題，配合繁體字幕，供品牌持續發佈。">为康礎制作粤语社媒系列影片，以物理治疗示范及日常健康问题为主题，配合繁体字幕，供品牌持续发布。</p><a class="project-open" data-en="View project ↗" data-zh="查看项目 ↗" data-zh-hant="查看項目 ↗" href="basic-life.html">查看项目 ↗</a></div></article><article class="project" data-category="photography">
-<div class="studio-flip">
-<div class="studio-flip-inner">
-<div class="studio-flip-front"><img alt="" decoding="async" loading="lazy" src="assets/spaces/pousada-suite-bedroom.webp"/></div>
-<div class="studio-flip-back" inert=""><img alt="" decoding="async" loading="lazy" src="assets/spaces/pousada-private-terrace.webp"/><a class="studio-back-link" data-en="View project" data-zh="查看项目" data-zh-hant="查看項目" href="space-pousada.html">查看项目</a></div>
 </div>
-<a class="studio-cover-link" data-en="Pousada de São Tiago" data-zh="圣地牙哥古堡酒店" data-zh-hant="聖地牙哥古堡酒店" href="space-pousada.html">圣地牙哥古堡酒店</a><button aria-pressed="false" class="studio-flip-toggle" data-en="Flip cover" data-zh="翻转封面" data-zh-hant="翻轉封面" type="button">翻转封面</button>
+<div class="service-rows">
+<article class="service-row">
+<div class="service-heading">
+<img class="service-thumb" src="assets/social/mitco-italy-aerial-cover.webp" alt="" width="72" height="72" loading="lazy" style="object-position:50% 50%"/>
+<h3 class="" data-zh="社媒内容" data-zh-hant="社媒內容" data-en="Social content" >社媒内容</h3>
 </div>
-<div class="project-overview"><a class="project-caption project-case" href="space-pousada.html"><div><p data-en="Interiors" data-zh="空间摄影" data-zh-hant="空間攝影">空间摄影</p><h3 data-en="Pousada de São Tiago" data-zh="圣地牙哥古堡酒店" data-zh-hant="聖地牙哥古堡酒店">圣地牙哥古堡酒店</h3></div><span aria-hidden="true">↗</span></a><p class="project-description" data-en="Guest rooms, the historic property and dining imagery for Pousada de São Tiago, with interiors and property photos used on booking platforms." data-zh="为澳门圣地牙哥古堡酒店拍摄客房、古堡环境及餐饮素材，客房与环境图用于预订平台。" data-zh-hant="為澳門聖地牙哥古堡酒店拍攝客房、古堡環境及餐飲素材，客房與環境圖用於預訂平台。">为澳门圣地牙哥古堡酒店拍摄客房、古堡环境及餐饮素材，客房与环境图用于预订平台。</p><a class="project-open" data-en="View project ↗" data-zh="查看项目 ↗" data-zh-hant="查看項目 ↗" href="space-pousada.html">查看项目 ↗</a></div></article><article class="project" data-category="films">
-<div class="studio-flip">
-<div class="studio-flip-inner">
-<div class="studio-flip-front"><img alt="主厨站在画面中央，抱臂看向镜头" decoding="async" loading="lazy" src="assets/library/crowne-chef-centred-cover.webp"/></div>
-<div class="studio-flip-back" inert=""><img alt="" decoding="async" loading="lazy" src="assets/portfolio/chef-6.webp"/><a class="studio-back-link" data-en="View project" data-zh="查看项目" data-zh-hant="查看項目" href="films.html#crowne-plaza">查看项目</a></div>
+<div class="service-copy">
+<p class="" data-zh="从账号内容梳理到月度选题、实拍与发布，让品牌持续有内容可用。" data-zh-hant="由帳號內容梳理到每月選題、實拍及發佈，為品牌持續製作內容。" data-en="From channel reviews and monthly planning to shoots and publishing, we create content for your brand throughout the year." >从账号内容梳理到月度选题、实拍与发布，让品牌持续有内容可用。</p>
+<ul>
+<li class="" data-zh="短片、轮播与双语文案" data-zh-hant="短片、輪播及雙語文案" data-en="Short films, carousels &amp; bilingual copy" >短片、轮播与双语文案</li>
+<li class="" data-zh="Instagram、Facebook 与小红书适配" data-zh-hant="Instagram、Facebook 及小紅書版本" data-en="Instagram, Facebook &amp; Xiaohongshu versions" >Instagram、Facebook 与小红书适配</li>
+<li class="" data-zh="发布排期与内容复盘" data-zh-hant="發佈排期及內容檢視" data-en="Publishing schedules &amp; content reviews" >发布排期与内容复盘</li>
+</ul>
 </div>
-<a class="studio-cover-link" data-en="Crowne Plaza Macau" data-zh="澳门皇冠假日酒店" data-zh-hant="澳門皇冠假日酒店" href="films.html#crowne-plaza">澳门皇冠假日酒店</a><button aria-pressed="false" class="studio-flip-toggle" data-en="Flip cover" data-zh="翻转封面" data-zh-hant="翻轉封面" type="button">翻转封面</button>
+<div class="service-actions">
+<a href="services.html#social-services" class="text-link">
+<span class="" data-zh="服务范围" data-zh-hant="服務範圍" data-en="Service scope" >服务范围</span>
+</a>
+<a href="social.html" class="text-link">
+<span class="" data-zh="浏览社媒项目" data-zh-hant="瀏覽社媒項目" data-en="Social media projects" >浏览社媒项目</span>
+</a>
 </div>
-<div class="project-overview"><a class="project-caption project-case" href="films.html#crowne-plaza"><div><p data-en="Chef portrait film" data-zh="主厨形象片" data-zh-hant="主廚形象片">主厨形象片</p><h3 data-en="Crowne Plaza Macau" data-zh="澳门皇冠假日酒店" data-zh-hant="澳門皇冠假日酒店">澳门皇冠假日酒店</h3></div><span aria-hidden="true">↗</span></a><p class="project-description" data-en="From the market to the kitchen, this film follows the chef and team at Imperial Kitchen." data-zh="镜头从街市选材跟到后厨，呈现皇厨中餐厅主厨和团队的日常。" data-zh-hant="鏡頭從街市選材跟到後廚，呈現皇廚中餐廳主廚和團隊的日常。">镜头从街市选材跟到后厨，呈现皇厨中餐厅主厨和团队的日常。</p><a class="project-open" data-en="View project ↗" data-zh="查看项目 ↗" data-zh-hant="查看項目 ↗" href="films.html#crowne-plaza">查看项目 ↗</a></div></article><article class="project" data-category="photography">
-<div class="studio-flip">
-<div class="studio-flip-inner">
-<div class="studio-flip-front"><img alt="" decoding="async" loading="lazy" src="assets/library/clerigos-sandwich.webp"/></div>
-<div class="studio-flip-back" inert=""><img alt="" decoding="async" loading="lazy" src="assets/portfolio/clerigos-2.webp"/><a class="studio-back-link" data-en="View project" data-zh="查看项目" data-zh-hant="查看項目" href="clerigos.html">查看项目</a></div>
+</article>
+<article class="service-row">
+<div class="service-heading">
+<img class="service-thumb" src="assets/spaces/pousada-suite-bedroom.webp" alt="" width="72" height="72" loading="lazy" style="object-position:50% 50%"/>
+<h3 class="" data-zh="商业摄影" data-zh-hant="商業攝影" data-en="Photography" >商业摄影</h3>
 </div>
-<a class="studio-cover-link" data-en="Clérigos" data-zh="卡爾圖葡式麵包" data-zh-hant="卡爾圖葡式麵包" href="clerigos.html">卡爾圖葡式麵包</a><button aria-pressed="false" class="studio-flip-toggle" data-en="Flip cover" data-zh="翻转封面" data-zh-hant="翻轉封面" type="button">翻转封面</button>
+<div class="service-copy">
+<p class="" data-zh="为官网、电商、预订平台和社交媒体拍摄空间、商品、餐饮与人物。" data-zh-hant="為官網、網店、預訂平台及社交媒體拍攝空間、商品、餐飲及人物。" data-en="Photography of interiors, products, food and people for websites, online stores, booking platforms and social channels." >为官网、电商、预订平台和社交媒体拍摄空间、商品、餐饮与人物。</p>
+<ul>
+<li class="" data-zh="客房、室内与环境摄影" data-zh-hant="客房、室內及環境攝影" data-en="Guest rooms, interiors &amp; surroundings" >客房、室内与环境摄影</li>
+<li class="" data-zh="商品主图、使用场景与细节" data-zh-hant="商品主圖、使用場景及細節" data-en="Product images, use scenarios &amp; details" >商品主图、使用场景与细节</li>
+<li class="" data-zh="活动纪实、形象照与相片直播" data-zh-hant="活動紀錄、形象照及相片直播" data-en="Events, portraits &amp; live photo galleries" >活动纪实、形象照与相片直播</li>
+</ul>
 </div>
-<div class="project-overview"><a class="project-caption project-case" href="clerigos.html"><div><p data-en="Food &amp; product" data-zh="餐饮与产品" data-zh-hant="餐飲與產品">餐饮与产品</p><h3 data-en="Clérigos" data-zh="卡爾圖葡式麵包" data-zh-hant="卡爾圖葡式麵包">卡爾圖葡式麵包</h3></div><span aria-hidden="true">↗</span></a><p class="project-description" data-en="Photography of the Rua do Cunha storefront, its signature pork chop bun and the preparation behind it." data-zh="拍摄官也街门店、招牌葡式猪扒包与制作细节。" data-zh-hant="拍攝官也街門店、招牌葡式豬扒包與製作細節。">拍摄官也街门店、招牌葡式猪扒包与制作细节。</p><a class="project-open" data-en="View project ↗" data-zh="查看项目 ↗" data-zh-hant="查看項目 ↗" href="clerigos.html">查看项目 ↗</a></div></article><article class="project" data-category="photography">
-<div class="studio-flip">
-<div class="studio-flip-inner">
-<div class="studio-flip-front"><img alt="" decoding="async" loading="lazy" src="assets/events/live-diasorin-2.webp"/></div>
-<div class="studio-flip-back" inert=""><img alt="" decoding="async" loading="lazy" src="assets/events/live-diasorin-1.webp"/><a class="studio-back-link" data-en="View project" data-zh="查看项目" data-zh-hant="查看項目" href="photography.html#live-diasorin">查看项目</a></div>
+<div class="service-actions">
+<a href="services.html#photo-services" class="text-link">
+<span class="" data-zh="服务范围" data-zh-hant="服務範圍" data-en="Service scope" >服务范围</span>
+</a>
+<a href="photography.html" class="text-link">
+<span class="" data-zh="浏览摄影作品" data-zh-hant="瀏覽攝影作品" data-en="Photography work" >浏览摄影作品</span>
+</a>
 </div>
-<a class="studio-cover-link" data-en="DiaSorin APAC" data-zh="DiaSorin APAC" data-zh-hant="DiaSorin APAC" href="photography.html#live-diasorin">DiaSorin APAC</a><button aria-pressed="false" class="studio-flip-toggle" data-en="Flip cover" data-zh="翻转封面" data-zh-hant="翻轉封面" type="button">翻转封面</button>
+</article>
+<article class="service-row">
+<div class="service-heading">
+<img class="service-thumb" src="assets/library/crowne-chef-centred-cover.webp" alt="" width="72" height="72" loading="lazy" style="object-position:52% 48%"/>
+<h3 class="" data-zh="品牌影片" data-zh-hant="品牌影片" data-en="Brand films" >品牌影片</h3>
 </div>
-<div class="project-overview"><a class="project-caption project-case" href="photography.html#live-diasorin"><div><p data-en="Events &amp; live photo" data-zh="活动与图片直播" data-zh-hant="活動與圖片直播">活动与图片直播</p><h3 data-en="DiaSorin APAC" data-zh="DiaSorin APAC" data-zh-hant="DiaSorin APAC">DiaSorin APAC</h3></div><span aria-hidden="true">↗</span></a><p class="project-description" data-en="Conference photography and a live photo gallery for DiaSorin’s APAC distributor meeting at W Macau." data-zh="在澳门 W 酒店为 DiaSorin 亚太区经销商年会拍摄并提供图片直播。" data-zh-hant="在澳門 W 酒店為 DiaSorin 亞太區經銷商年會拍攝並提供圖片直播。">在澳门 W 酒店为 DiaSorin 亚太区经销商年会拍摄并提供图片直播。</p><a class="project-open" data-en="View project ↗" data-zh="查看项目 ↗" data-zh-hant="查看項目 ↗" href="photography.html#live-diasorin">查看项目 ↗</a></div></article><article class="project" data-category="films">
-<div class="studio-flip">
-<div class="studio-flip-inner">
-<div class="studio-flip-front"><img alt="" decoding="async" loading="lazy" src="assets/library/godox-fresnel.webp"/></div>
-<div class="studio-flip-back" inert=""><img alt="" decoding="async" loading="lazy" src="assets/library/godox-gf18m-excerpt-poster.webp"/><a class="studio-back-link" data-en="View project" data-zh="查看项目" data-zh-hant="查看項目" href="films.html#godox">查看项目</a></div>
+<div class="service-copy">
+<p class="" data-zh="通过人物、商品与真实场景，讲清品牌故事、功能特点和使用方式。" data-zh-hant="透過人物、商品及真實場景，呈現品牌故事、功能特點及使用方式。" data-en="Brand stories, product features and demonstrations, told through people and real locations." >通过人物、商品与真实场景，讲清品牌故事、功能特点和使用方式。</p>
+<ul>
+<li class="" data-zh="企业、酒店与人物专题" data-zh-hant="企業、酒店及人物專題" data-en="Corporate, hospitality &amp; profile films" >企业、酒店与人物专题</li>
+<li class="" data-zh="商品演示、装配与使用影片" data-zh-hant="商品示範、裝配及使用影片" data-en="Product, assembly &amp; how-to films" >商品演示、装配与使用影片</li>
+<li class="" data-zh="现有素材再创作与横竖版剪辑" data-zh-hant="現有素材再創作及橫直版剪接" data-en="Existing-footage edits &amp; format adaptation" >现有素材再创作与横竖版剪辑</li>
+</ul>
 </div>
-<a class="studio-cover-link" data-en="Godox" data-zh="神牛" data-zh-hant="神牛" href="films.html#godox">神牛</a><button aria-pressed="false" class="studio-flip-toggle" data-en="Flip cover" data-zh="翻转封面" data-zh-hant="翻轉封面" type="button">翻转封面</button>
+<div class="service-actions">
+<a href="services.html#film-services" class="text-link">
+<span class="" data-zh="服务范围" data-zh-hant="服務範圍" data-en="Service scope" >服务范围</span>
+</a>
+<a href="films.html" class="text-link">
+<span class="" data-zh="浏览影片作品" data-zh-hant="瀏覽影片作品" data-en="Films" >浏览影片作品</span>
+</a>
 </div>
-<div class="project-overview"><a class="project-caption project-case" href="films.html#godox"><div><p data-en="Product films" data-zh="产品宣传片" data-zh-hant="產品宣傳片">产品宣传片</p><h3 data-en="Godox" data-zh="神牛" data-zh-hant="神牛">神牛</h3></div><span aria-hidden="true">↗</span></a><p class="project-description" data-en="Three product films for Godox, demonstrating P8 pixel effects, the adjustable diffusion panel and the GF18M motorised Fresnel lens." data-zh="为神牛制作三条产品影片，展示 P8 像素光效、可调柔光屏及 GF18M 电动菲涅尔透镜的功能与应用。" data-zh-hant="為神牛製作三條產品影片，展示 P8 像素光效、可調柔光屏及 GF18M 電動菲涅爾透鏡的功能與應用。">为神牛制作三条产品影片，展示 P8 像素光效、可调柔光屏及 GF18M 电动菲涅尔透镜的功能与应用。</p><a class="project-open" data-en="View project ↗" data-zh="查看项目 ↗" data-zh-hant="查看項目 ↗" href="films.html#godox">查看项目 ↗</a></div></article><article class="project" data-category="photography">
-<div class="studio-flip studio-flip--diptych">
-<div class="studio-flip-inner">
-<div class="studio-flip-front"><div class="studio-diptych"><img alt="汪小敏公开造型照" decoding="async" loading="lazy" src="assets/events/wang-weibo-01.webp"/><img alt="汪小敏公开造型照" decoding="async" loading="lazy" src="assets/events/wang-weibo-03.webp"/></div></div>
-<div class="studio-flip-back" inert=""><div class="studio-diptych"><img alt="汪小敏公开造型照" decoding="async" loading="lazy" src="assets/events/wang-weibo-09.webp"/><img alt="汪小敏公开造型照" decoding="async" loading="lazy" src="assets/events/wang-weibo-04.webp"/></div><a class="studio-back-link" data-en="View project" data-zh="查看项目" data-zh-hant="查看項目" href="wang-xiaomin.html">查看项目</a></div>
+</article>
 </div>
-<a class="studio-cover-link" data-en="Wang Xiaomin" data-zh="汪小敏" data-zh-hant="汪小敏" href="wang-xiaomin.html">汪小敏</a><button aria-pressed="false" class="studio-flip-toggle" data-en="Flip cover" data-zh="翻转封面" data-zh-hant="翻轉封面" type="button">翻转封面</button>
+</section>
+<section class="section selected-work" id="work">
+<div class="section-heading">
+<div>
+<p class="eyebrow">SELECTED PROJECTS</p>
+<h2 class="" data-zh="精选项目" data-zh-hant="精選項目" data-en="Selected projects" >精选项目</h2>
 </div>
-<div class="project-overview"><a class="project-caption project-case" href="wang-xiaomin.html"><div><p data-en="Stage &amp; film festivals" data-zh="演出与电影节" data-zh-hant="演出與電影節">演出与电影节</p><h3 data-en="Wang Xiaomin" data-zh="汪小敏" data-zh-hant="汪小敏">汪小敏</h3></div><span aria-hidden="true">↗</span></a><p class="project-description" data-en="Six portraits from Wang Xiaomin’s Greater Bay Area concert appearance, as published on her Weibo." data-zh="为汪小敏拍摄大湾区音乐会出场造型，收录她在微博发布的六张照片。" data-zh-hant="為汪小敏拍攝大灣區音樂會出場造型，收錄她在微博發佈的六張照片。">为汪小敏拍摄大湾区音乐会出场造型，收录她在微博发布的六张照片。</p><a class="project-open" data-en="View project ↗" data-zh="查看项目 ↗" data-zh-hant="查看項目 ↗" href="wang-xiaomin.html">查看项目 ↗</a></div></article><article class="project" data-category="photography">
-<div class="studio-flip">
-<div class="studio-flip-inner">
-<div class="studio-flip-front"><img alt="" decoding="async" loading="lazy" src="assets/library/crowne-chef.webp"/></div>
-<div class="studio-flip-back" inert=""><img alt="" decoding="async" loading="lazy" src="assets/portfolio/chef-4.webp"/><a class="studio-back-link" data-en="View project" data-zh="查看项目" data-zh-hant="查看項目" href="crowne-plaza.html">查看项目</a></div>
+<div class="section-heading-side">
+<p class="" data-zh="点选项目，探索系列内容与完整影片。" data-zh-hant="點選項目，探索系列內容與完整影片。" data-en="Select a project to explore the series and full films." >点选项目，探索系列内容与完整影片。</p>
 </div>
-<a class="studio-cover-link" data-en="Crowne Plaza · Chef portraits" data-zh="皇冠假日 · 主厨肖像" data-zh-hant="皇冠假日 · 主廚肖像" href="crowne-plaza.html">皇冠假日 · 主厨肖像</a><button aria-pressed="false" class="studio-flip-toggle" data-en="Flip cover" data-zh="翻转封面" data-zh-hant="翻轉封面" type="button">翻转封面</button>
 </div>
-<div class="project-overview"><a class="project-caption project-case" href="crowne-plaza.html"><div><p data-en="Portraits" data-zh="人物摄影" data-zh-hant="人物攝影">人物摄影</p><h3 data-en="Crowne Plaza · Chef portraits" data-zh="皇冠假日 · 主厨肖像" data-zh-hant="皇冠假日 · 主廚肖像">皇冠假日 · 主厨肖像</h3></div><span aria-hidden="true">↗</span></a><p class="project-description" data-en="Chef portraits and kitchen documentary photography for Crowne Plaza Macau." data-zh="为澳门皇冠假日酒店拍摄主厨肖像与团队的后厨工作。" data-zh-hant="為澳門皇冠假日酒店拍攝主廚肖像與團隊的後廚工作。">为澳门皇冠假日酒店拍摄主厨肖像与团队的后厨工作。</p><a class="project-open" data-en="View project ↗" data-zh="查看项目 ↗" data-zh-hant="查看項目 ↗" href="crowne-plaza.html">查看项目 ↗</a></div></article><article class="project" data-category="photography">
-<div class="studio-flip">
-<div class="studio-flip-inner">
-<div class="studio-flip-front"><img alt="" decoding="async" loading="lazy" src="assets/weddings/sunflower-ceremony-07-sm.webp"/></div>
-<div class="studio-flip-back" inert=""><img alt="" decoding="async" loading="lazy" src="assets/weddings/sunflower-ceremony-03-sm.webp"/><a class="studio-back-link" data-en="View project" data-zh="查看项目" data-zh-hant="查看項目" href="weddings.html">查看项目</a></div>
+<div class="work-bar">
+<div class="work-filters" role="group" aria-label="项目分类">
+<button type="button" data-filter="all" aria-pressed="true">
+<span class="" data-zh="全部项目" data-zh-hant="全部項目" data-en="All projects" >全部项目</span>
+</button>
+<button type="button" data-filter="social" aria-pressed="false">
+<span class="" data-zh="社媒系列" data-zh-hant="社媒系列" data-en="Social series" >社媒系列</span>
+</button>
+<button type="button" data-filter="films" aria-pressed="false">
+<span class="" data-zh="品牌影片" data-zh-hant="品牌影片" data-en="Films" >品牌影片</span>
+</button>
 </div>
-<a class="studio-cover-link" data-en="Macao weddings" data-zh="澳门领证跟拍" data-zh-hant="澳門領證跟拍" href="weddings.html">澳门领证跟拍</a><button aria-pressed="false" class="studio-flip-toggle" data-en="Flip cover" data-zh="翻转封面" data-zh-hant="翻轉封面" type="button">翻转封面</button>
+<a href="#photography" class="text-link">
+<span class="" data-zh="直接浏览摄影" data-zh-hant="直接瀏覽攝影" data-en="Go to photography" >直接浏览摄影</span>
+</a>
 </div>
-<div class="project-overview"><a class="project-caption project-case" href="weddings.html"><div><p data-en="Weddings &amp; portraits" data-zh="婚礼与约拍" data-zh-hant="婚禮與約拍">婚礼与约拍</p><h3 data-en="Macao weddings" data-zh="澳门领证跟拍" data-zh-hant="澳門領證跟拍">澳门领证跟拍</h3></div><span aria-hidden="true">↗</span></a><p class="project-description" data-en="Civil ceremony and wedding photography in Macao, with couples and their guests." data-zh="澳门领证与婚礼纪实，记录新人和亲友在现场的互动。" data-zh-hant="澳門領證與婚禮紀實，記錄新人和親友在現場的互動。">澳门领证与婚礼纪实，记录新人和亲友在现场的互动。</p><a class="project-open" data-en="View project ↗" data-zh="查看项目 ↗" data-zh-hant="查看項目 ↗" href="weddings.html">查看项目 ↗</a></div></article><article class="project" data-category="films">
-<div class="studio-flip">
-<div class="studio-flip-inner">
-<div class="studio-flip-front"><img alt="" decoding="async" loading="lazy" src="assets/library/hotex-stone-excerpt-poster.webp"/></div>
-<div class="studio-flip-back" inert=""><img alt="" decoding="async" loading="lazy" src="assets/library/hotex-film.webp"/><a class="studio-back-link" data-en="View project" data-zh="查看项目" data-zh-hant="查看項目" href="films.html#hotex">查看项目</a></div>
+<div class="case-layout">
+<div class="case-visual">
+<div class="case-stage" id="case-stage">
+<div class="case-rotator">
+<div class="case-face case-front">
+<img src="assets/social/air-macau-airport-cover.webp" alt="澳门国际机场停机坪上的澳门航空客机" loading="eager" decoding="async"/>
 </div>
-<a class="studio-cover-link" data-en="Kangda Stone" data-zh="康达石材" data-zh-hant="康達石材" href="films.html#hotex">康达石材</a><button aria-pressed="false" class="studio-flip-toggle" data-en="Flip cover" data-zh="翻转封面" data-zh-hant="翻轉封面" type="button">翻转封面</button>
+<div class="case-face case-back" inert>
+<img src="assets/social/air-macau-cockpit-cover.webp" alt="澳门航空模拟驾驶舱" loading="eager" decoding="async"/>
 </div>
-<div class="project-overview"><a class="project-caption project-case" href="films.html#hotex"><div><p data-en="Company film" data-zh="企业宣传片" data-zh-hant="企業宣傳片">企业宣传片</p><h3 data-en="Kangda Stone" data-zh="康达石材" data-zh-hant="康達石材">康达石材</h3></div><span aria-hidden="true">↗</span></a><p class="project-description" data-en="A film for Kangda Stone, produced through Higgs Design, following the production floor and stone processing." data-zh="通过 Higgs Design 合作，为康达石材记录生产现场与加工流程。" data-zh-hant="通過 Higgs Design 合作，為康達石材記錄生產現場與加工流程。">通过 Higgs Design 合作，为康达石材记录生产现场与加工流程。</p><a class="project-open" data-en="View project ↗" data-zh="查看项目 ↗" data-zh-hant="查看項目 ↗" href="films.html#hotex">查看项目 ↗</a></div></article><article class="project" data-category="social">
-<div class="studio-flip">
-<div class="studio-flip-inner">
-<div class="studio-flip-front"><img alt="" decoding="async" loading="lazy" src="assets/social/ifbrand-landscape-front.webp"/></div>
-<div class="studio-flip-back" inert=""><img alt="" decoding="async" loading="lazy" src="assets/social/ifbrand-landscape-back.webp"/><a class="studio-back-link" data-en="View project" data-zh="查看项目" data-zh-hant="查看項目" href="ifbrand.html">查看项目</a></div>
 </div>
-<a class="studio-cover-link" data-en="IFBRAND" data-zh="IFBRAND" data-zh-hant="IFBRAND" href="ifbrand.html">IFBRAND</a><button aria-pressed="false" class="studio-flip-toggle" data-en="Flip cover" data-zh="翻转封面" data-zh-hant="翻轉封面" type="button">翻转封面</button>
+<button type="button" class="flip-button" aria-pressed="false" aria-label="翻转封面" data-aria-label-zh="翻转封面" data-aria-label-zh-hant="翻轉封面" data-aria-label-en="Flip cover">
+<span aria-hidden="true">↻</span>
+<span class="" data-zh="翻转封面" data-zh-hant="翻轉封面" data-en="Flip cover" >翻转封面</span>
+</button>
 </div>
-<div class="project-overview"><a class="project-caption project-case" href="ifbrand.html"><div><p data-en="Factory films" data-zh="工厂系列" data-zh-hant="工廠系列">工厂系列</p><h3 data-en="IFBRAND" data-zh="IFBRAND" data-zh-hant="IFBRAND">IFBRAND</h3></div><span aria-hidden="true">↗</span></a><p class="project-description" data-en="A factory series showing how products are made and how each facility operates." data-zh="走进生产现场，记录不同产品的制造过程和工厂运作。" data-zh-hant="走進生產現場，記錄不同產品的製造過程和工廠運作。">走进生产现场，记录不同产品的制造过程和工厂运作。</p><a class="project-open" data-en="View project ↗" data-zh="查看项目 ↗" data-zh-hant="查看項目 ↗" href="ifbrand.html">查看项目 ↗</a></div></article><article class="project" data-category="social">
-<div class="studio-flip">
-<div class="studio-flip-inner">
-<div class="studio-flip-front"><img alt="" decoding="async" loading="lazy" src="assets/creators/handa-skycab-post.webp"/></div>
-<div class="studio-flip-back" inert=""><img alt="" decoding="async" loading="lazy" src="assets/creators/lex-published-1.webp"/><a class="studio-back-link" data-en="View project" data-zh="查看项目" data-zh-hant="查看項目" href="social.html#creators">查看项目</a></div>
+<div class="case-copy" aria-live="polite">
+<p class="eyebrow" id="case-label">
+<span class="" data-zh="100 条目的地短片" data-zh-hant="100 條目的地短片" data-en="100 destination shorts" >100 条目的地短片</span>
+</p>
+<h3 id="case-name">
+<span class="" data-zh="澳门航空" data-zh-hant="澳門航空" data-en="Air Macau" >澳门航空</span>
+</h3>
+<p id="case-description">
+<span class="" data-zh="为澳门航空制作 100 条目的地及航线短片，涵盖首航活动、登机牌礼遇与在澳体验。" data-zh-hant="為澳門航空製作 100 條目的地及航線短片，涵蓋首航活動、登機牌禮遇與在澳體驗。" data-en="100 destination and route shorts for Air Macau, covering inaugural flights, boarding-pass offers and experiences in Macao." >为澳门航空制作 100 条目的地及航线短片，涵盖首航活动、登机牌礼遇与在澳体验。</span>
+</p>
+<a href="air-macau.html" class="text-link case-link">
+<span class="" data-zh="查看完整项目" data-zh-hant="查看完整項目" data-en="View project" >查看完整项目</span>
+</a>
 </div>
-<a class="studio-cover-link" data-en="International creators in Macao" data-zh="澳门国际创作者" data-zh-hant="澳門國際創作者" href="social.html#creators">澳门国际创作者</a><button aria-pressed="false" class="studio-flip-toggle" data-en="Flip cover" data-zh="翻转封面" data-zh-hant="翻轉封面" type="button">翻转封面</button>
 </div>
-<div class="project-overview"><a class="project-caption project-case" href="social.html#creators"><div><p data-en="Creator collaborations" data-zh="创作者合作" data-zh-hant="創作者合作">创作者合作</p><h3 data-en="International creators in Macao" data-zh="澳门国际创作者" data-zh-hant="澳門國際創作者">澳门国际创作者</h3></div><span aria-hidden="true">↗</span></a><p class="project-description" data-en="Photography and social content for international creators covering Macao hotels, city experiences and events." data-zh="在澳门为国际创作者拍摄酒店、城市体验与活动内容。" data-zh-hant="在澳門為國際創作者拍攝酒店、城市體驗與活動內容。">在澳门为国际创作者拍摄酒店、城市体验与活动内容。</p><a class="project-open" data-en="View project ↗" data-zh="查看项目 ↗" data-zh-hant="查看項目 ↗" href="social.html#creators">查看项目 ↗</a></div></article><article class="project" data-category="photography">
-<div class="studio-flip">
-<div class="studio-flip-inner">
-<div class="studio-flip-front"><img alt="" decoding="async" loading="lazy" src="assets/events/liu-2023-portrait.webp"/></div>
-<div class="studio-flip-back" inert=""><img alt="" decoding="async" loading="lazy" src="assets/events/liu-2022-portrait.webp"/><a class="studio-back-link" data-en="View project" data-zh="查看项目" data-zh-hant="查看項目" href="macao-film-festival.html">查看项目</a></div>
+<div class="case-index">
+<button type="button" class="case-row is-selected" data-case="0" data-category="social" aria-pressed="true" aria-controls="case-stage">
+<strong>
+<span class="" data-zh="澳门航空" data-zh-hant="澳門航空" data-en="Air Macau" >澳门航空</span>
+</strong>
+<span class="case-type" data-zh="100 条目的地短片" data-zh-hant="100 條目的地短片" data-en="100 destination shorts" >100 条目的地短片</span>
+<span class="row-state" aria-hidden="true">+</span>
+</button>
+<button type="button" class="case-row " data-case="1" data-category="social" aria-pressed="false" aria-controls="case-stage">
+<strong>
+<span class="" data-zh="MITCO · 意乡人" data-zh-hant="MITCO · 意鄉人" data-en="MITCO" >MITCO · 意乡人</span>
+</strong>
+<span class="case-type" data-zh="跨境社媒月度合作" data-zh-hant="跨境社媒月度合作" data-en="Cross-border social retainer" >跨境社媒月度合作</span>
+<span class="row-state" aria-hidden="true">+</span>
+</button>
+<button type="button" class="case-row " data-case="2" data-category="social" aria-pressed="false" aria-controls="case-stage">
+<strong>
+<span class="" data-zh="康礎 Basic Life" data-zh-hant="康礎 Basic Life" data-en="Basic Life" >康礎 Basic Life</span>
+</strong>
+<span class="case-type" data-zh="9 条粤语物理治疗短片" data-zh-hant="9 條粵語物理治療短片" data-en="9 Cantonese physiotherapy shorts" >9 条粤语物理治疗短片</span>
+<span class="row-state" aria-hidden="true">+</span>
+</button>
+<button type="button" class="case-row " data-case="3" data-category="social" aria-pressed="false" aria-controls="case-stage">
+<strong>
+<span class="" data-zh="IFBRAND" data-zh-hant="IFBRAND" data-en="IFBRAND" >IFBRAND</span>
+</strong>
+<span class="case-type" data-zh="工厂系列" data-zh-hant="工廠系列" data-en="Factory films" >工厂系列</span>
+<span class="row-state" aria-hidden="true">+</span>
+</button>
+<button type="button" class="case-row " data-case="4" data-category="films" aria-pressed="false" aria-controls="case-stage">
+<strong>
+<span class="" data-zh="神牛" data-zh-hant="神牛" data-en="Godox" >神牛</span>
+</strong>
+<span class="case-type" data-zh="产品宣传片" data-zh-hant="產品宣傳片" data-en="Product films" >产品宣传片</span>
+<span class="row-state" aria-hidden="true">+</span>
+</button>
+<button type="button" class="case-row " data-case="5" data-category="films" aria-pressed="false" aria-controls="case-stage">
+<strong>
+<span class="" data-zh="澳门皇冠假日酒店" data-zh-hant="澳門皇冠假日酒店" data-en="Crowne Plaza Macau" >澳门皇冠假日酒店</span>
+</strong>
+<span class="case-type" data-zh="主厨形象片" data-zh-hant="主廚形象片" data-en="Chef portrait film" >主厨形象片</span>
+<span class="row-state" aria-hidden="true">+</span>
+</button>
+<button type="button" class="case-row " data-case="6" data-category="films" aria-pressed="false" aria-controls="case-stage">
+<strong>
+<span class="" data-zh="康达石材" data-zh-hant="康達石材" data-en="Kangda Stone" >康达石材</span>
+</strong>
+<span class="case-type" data-zh="企业宣传片" data-zh-hant="企業宣傳片" data-en="Company film" >企业宣传片</span>
+<span class="row-state" aria-hidden="true">+</span>
+</button>
+<button type="button" class="case-row " data-case="7" data-category="social" aria-pressed="false" aria-controls="case-stage">
+<strong>
+<span class="" data-zh="澳门国际创作者" data-zh-hant="澳門國際創作者" data-en="International creators in Macao" >澳门国际创作者</span>
+</strong>
+<span class="case-type" data-zh="创作者合作" data-zh-hant="創作者合作" data-en="Creator collaborations" >创作者合作</span>
+<span class="row-state" aria-hidden="true">+</span>
+</button>
 </div>
-<a class="studio-cover-link" data-en="Macao International Movie Festival" data-zh="澳门国际电影节" data-zh-hant="澳門國際電影節" href="macao-film-festival.html">澳门国际电影节</a><button aria-pressed="false" class="studio-flip-toggle" data-en="Flip cover" data-zh="翻转封面" data-zh-hant="翻轉封面" type="button">翻转封面</button>
 </div>
-<div class="project-overview"><a class="project-caption project-case" href="macao-film-festival.html"><div><p data-en="Events &amp; portraits" data-zh="活动与人物" data-zh-hant="活動與人物">活动与人物</p><h3 data-en="Macao International Movie Festival" data-zh="澳门国际电影节" data-zh-hant="澳門國際電影節">澳门国际电影节</h3></div><span aria-hidden="true">↗</span></a><p class="project-description" data-en="Red carpet, interviews and awards coverage across two editions of the Macao International Movie and Television Festivals." data-zh="两届澳门国际电影节暨澳门国际电视节的红毯、采访和颁奖现场。" data-zh-hant="兩屆澳門國際電影節暨澳門國際電視節的紅毯、採訪和頒獎現場。">两届澳门国际电影节暨澳门国际电视节的红毯、采访和颁奖现场。</p><a class="project-open" data-en="View project ↗" data-zh="查看项目 ↗" data-zh-hant="查看項目 ↗" href="macao-film-festival.html">查看项目 ↗</a></div></article></div></section>
-<section class="about" id="about"><div class="wrap about-grid"><div class="about-photo"><div class="about-frame"><img alt="酒店主厨与团队在后厨工作" data-alt-zh="酒店主厨与团队在后厨工作" data-alt-zh-hant="酒店主廚與團隊在後廚工作" loading="lazy" src="assets/portfolio/chef-6.webp"/></div></div><div class="about-copy"><p class="eyebrow dark">THE STUDIO</p><h2 data-en="About the studio" data-zh="关于工作室" data-zh-hant="關於工作室">关于工作室</h2><p data-en="MaxYourWay produces social media content, commercial photography and brand films for hotels, brands and organisations in Macao and the Greater Bay Area. Our photography covers hotel rooms and interiors, food and products, and event coverage with live photo delivery." data-zh="MaxYourWay 为澳门及大湾区的酒店、品牌和机构提供社交媒体内容策划与制作、商业摄影及品牌宣传片制作。拍摄范围涵盖酒店客房与室内空间、餐饮及商品摄影、活动纪实与照片直播。" data-zh-hant="MaxYourWay 為澳門及大灣區的酒店、品牌及機構提供社交媒體內容策劃及製作、商業攝影及品牌宣傳片製作。拍攝範圍涵蓋酒店客房與室內空間、餐飲及商品攝影、活動紀錄及相片直播。">MaxYourWay 为澳门及大湾区的酒店、品牌和机构提供社交媒体内容策划与制作、商业摄影及品牌宣传片制作。拍摄范围涵盖酒店客房与室内空间、餐饮及商品摄影、活动纪实与照片直播。</p><p data-en="Our projects include 100 destination shorts for Air Macau, hotel chef series and films inside manufacturing facilities. We handle planning, filming, editing and retouching, and deliver work for social channels, hotel booking platforms and brand campaigns." data-zh="我们曾为澳门航空制作 100 条目的地短片，并拍摄酒店主厨系列及企业厂房专题。从前期策划、现场拍摄到剪辑及修图，我们按社交平台、酒店预订平台及品牌宣传的需要交付成品。" data-zh-hant="我們曾為澳門航空製作 100 條目的地短片，並拍攝酒店主廚系列及企業廠房專題。由前期策劃、現場拍攝到剪接及相片後期製作，我們按社交平台、酒店預訂平台及品牌宣傳的需要交付成品。">我们曾为澳门航空制作 100 条目的地短片，并拍摄酒店主厨系列及企业厂房专题。从前期策划、现场拍摄到剪辑及修图，我们按社交平台、酒店预订平台及品牌宣传的需要交付成品。</p><a class="text-link" data-en="View clients ↗" data-zh="查看合作品牌 ↗" data-zh-hant="查看合作品牌 ↗" href="clients.html">查看合作品牌 ↗</a></div></div></section><section class="wrap home-clients" id="clients"><div class="section-head"><h2 data-en="Clients" data-zh="合作企业" data-zh-hant="合作企業">合作企业</h2><a data-en="Client projects ↗" data-zh="查看合作案例 ↗" data-zh-hant="查看合作案例 ↗" href="clients.html">查看合作案例 ↗</a></div><ul class="client-marks">
-<li id="home-client-air-macau"><a class="client-mark" href="air-macau.html"><img alt="澳门航空" data-alt-zh="澳门航空" data-alt-zh-hant="澳門航空" height="628" loading="lazy" src="assets/clients/air-macau.png" width="2355"/></a></li>
-<li id="home-client-crowne-plaza-macau"><a class="client-mark" href="crowne-plaza.html"><img alt="澳门皇冠假日酒店" data-alt-zh="澳门皇冠假日酒店" data-alt-zh-hant="澳門皇冠假日酒店" height="859" loading="lazy" src="assets/clients/crowne-plaza-macau.png" width="2201"/></a></li>
-<li id="home-client-w-macau"><a class="client-mark" href="space-w-macau.html"><img alt="澳门新濠影汇 W 酒店" data-alt-zh="澳门新濠影汇 W 酒店" data-alt-zh-hant="澳門新濠影匯 W 酒店" height="422" loading="lazy" src="assets/clients/w-macau.png" width="3056"/></a></li>
-<li id="home-client-godox"><a class="client-mark" href="films.html#godox"><img alt="神牛" data-alt-zh="神牛" data-alt-zh-hant="神牛" loading="lazy" src="assets/clients/godox.svg"/></a></li>
-<li id="home-client-huawei"><div class="client-mark"><img alt="华为" data-alt-zh="华为" data-alt-zh-hant="華為" loading="lazy" src="assets/clients/huawei.svg"/></div></li>
-<li id="home-client-china-southern"><div class="client-mark"><img alt="中国南方航空" data-alt-zh="中国南方航空" data-alt-zh-hant="中國南方航空" height="138" loading="lazy" src="assets/clients/china-southern.png" width="644"/></div></li>
-<li id="home-client-yutong"><a class="client-mark" href="photography.html#live-yutong"><img alt="宇通" data-alt-zh="宇通" data-alt-zh-hant="宇通" loading="lazy" src="assets/clients/yutong.svg"/></a></li>
-<li id="home-client-diasorin"><a class="client-mark" href="photography.html#live-diasorin"><img alt="DiaSorin APAC" loading="lazy" src="assets/clients/diasorin.svg"/></a></li>
-<li id="home-client-hilton-huizhou"><div class="client-mark"><img alt="惠州希尔顿花园 · 惠州中海希尔顿" data-alt-zh="惠州希尔顿花园 · 惠州中海希尔顿" data-alt-zh-hant="惠州希爾頓花園 · 惠州中海希爾頓" loading="lazy" src="assets/clients/hilton-huizhou.svg"/></div></li>
-<li id="home-client-sofitel-macau"><a class="client-mark" href="space-sofitel.html"><img alt="澳门十六浦索菲特酒店" data-alt-zh="澳门十六浦索菲特酒店" data-alt-zh-hant="澳門十六浦索菲特酒店" loading="lazy" src="assets/clients/sofitel-macau.svg"/></a></li>
-<li id="home-client-new-loyalty"><a class="client-mark small-original" href="space-pousada.html"><img alt="新忠诚集团" data-alt-zh="新忠诚集团" data-alt-zh-hant="新忠誠集團" height="56" loading="lazy" src="assets/clients/new-loyalty.png" width="204"/></a></li>
-<li id="home-client-pousada-de-sao-tiago"><a class="client-mark" href="space-pousada.html"><img alt="澳门圣地牙哥古堡酒店" data-alt-zh="澳门圣地牙哥古堡酒店" data-alt-zh-hant="澳門聖地牙哥古堡酒店" height="989" loading="lazy" src="assets/clients/pousada-de-sao-tiago.png" width="1253"/></a></li>
-<li id="home-client-chimelong"><div class="client-mark"><img alt="横琴长隆企鹅酒店 · 横琴湾酒店" data-alt-zh="横琴长隆企鹅酒店 · 横琴湾酒店" data-alt-zh-hant="橫琴長隆企鵝酒店 · 橫琴灣酒店" height="200" loading="lazy" src="assets/clients/chimelong.png" width="546"/></div></li>
-<li id="home-client-chimelong-hengqin"><div class="client-mark"><img alt="横琴湾酒店" data-alt-zh="横琴湾酒店" data-alt-zh-hant="橫琴灣酒店" height="151" loading="lazy" src="assets/clients/chimelong-hengqin.png" width="600"/></div></li>
-<li id="home-client-specialized"><div class="client-mark"><img alt="Specialized 闪电" data-alt-zh="Specialized 闪电" data-alt-zh-hant="Specialized 閃電" loading="lazy" src="assets/clients/specialized.svg"/></div></li>
-<li id="home-client-mgto"><div class="client-mark"><img alt="澳门特别行政区政府旅游局" data-alt-zh="澳门特别行政区政府旅游局" data-alt-zh-hant="澳門特別行政區政府旅遊局" loading="lazy" src="assets/clients/mgto.svg"/></div></li>
-<li id="home-client-macao-polytechnic"><div class="client-mark"><img alt="澳门理工大学" data-alt-zh="澳门理工大学" data-alt-zh-hant="澳門理工大學" loading="lazy" src="assets/clients/macao-polytechnic.svg"/></div></li>
-<li id="home-client-henan-daily"><div class="client-mark"><img alt="河南日报" data-alt-zh="河南日报" data-alt-zh-hant="河南日報" height="194" loading="lazy" src="assets/clients/henan-masthead.png" width="586"/></div></li>
-<li id="home-client-dahe"><div class="client-mark"><img alt="大河报" data-alt-zh="大河报" data-alt-zh-hant="大河報" height="30" loading="lazy" src="assets/clients/dahe-masthead.png" style="max-width:106px;height:auto" width="106"/></div></li>
-<li id="home-client-clerigos"><a class="client-mark dark" href="clerigos.html"><img alt="卡爾圖葡式麵包" data-alt-zh="卡爾圖葡式麵包" data-alt-zh-hant="卡爾圖葡式麵包" height="390" loading="lazy" src="assets/clients/clerigos.png" width="1400"/></a></li>
-<li id="home-client-chinlam-whisky"><a class="client-mark dark" href="chinlam-whisky.html"><img alt="千林威士忌" data-alt-zh="千林威士忌" data-alt-zh-hant="千林威士忌" height="623" loading="lazy" src="assets/clients/chinlam-whisky.png" width="1051"/></a></li>
-<li id="home-client-ifbrandsourcing"><a class="client-mark dark" href="social.html#ifbrand"><img alt="IFBrandSourcing" height="1444" loading="lazy" src="assets/clients/ifbrandsourcing.png" width="2234"/></a></li>
-<li id="home-client-mitco"><a class="client-mark" href="social.html#mitco"><img alt="MITCO" height="600" loading="lazy" src="assets/clients/mitco.png" width="600"/></a></li>
-<li id="home-client-higgs-design"><a class="client-mark" href="films.html#hotex"><img alt="Higgs Design" height="168" loading="lazy" src="assets/clients/higgs-design.png" width="192"/></a></li>
-<li id="home-client-kangda-stone"><a class="client-mark dark" href="films.html#hotex"><img alt="康达石材" data-alt-zh="康达石材" data-alt-zh-hant="康達石材" height="102" loading="lazy" src="assets/clients/kangda-stone.png" width="640"/></a></li>
-<li id="home-client-macau-catholic-center"><div class="client-mark"><img alt="澳门公教中心" data-alt-zh="澳门公教中心" data-alt-zh-hant="澳門公教中心" height="490" loading="lazy" src="assets/clients/macau-catholic-center.png" width="110"/></div></li>
-<li id="home-client-basic-life"><a class="client-mark" href="social.html#basiclife"><img alt="澳门康礎" data-alt-zh="澳门康礎" data-alt-zh-hant="澳門康礎" height="1446" loading="lazy" src="assets/clients/basic-life.png" width="1675"/></a></li>
-<li id="home-client-inner"><a class="client-mark" href="space-inner.html"><img alt="由然" data-alt-zh="由然" data-alt-zh-hant="由然" height="376" loading="lazy" src="assets/clients/inner.png" width="1400"/></a></li>
-<li id="home-client-mobai"><a class="client-mark" href="space-mobai.html"><img alt="墨白城市酒窖" data-alt-zh="墨白城市酒窖" data-alt-zh-hant="墨白城市酒窖" height="609" loading="lazy" src="assets/clients/mobai.png" width="254"/></a></li>
-<li id="home-client-laltro"><div class="client-mark"><img alt="L’Altro 澳门" data-alt-zh="L’Altro 澳门" data-alt-zh-hant="L’Altro 澳門" height="428" loading="lazy" src="assets/clients/laltro.png" width="1400"/></div></li>
-<li id="home-client-art-center"><a class="client-mark" href="photography.html#live-nam-van"><img alt="南湾心麗美容中心" data-alt-zh="南湾心麗美容中心" data-alt-zh-hant="南灣心麗美容中心" height="360" loading="lazy" src="assets/clients/art-center.png" width="415"/></a></li>
-<li id="home-client-sao-le-tour-market"><div class="client-mark"><img alt="旭日物业" data-alt-zh="旭日物业" data-alt-zh-hant="旭日物業" height="139" loading="lazy" src="assets/clients/sao-le-tour-market.png" width="535"/></div></li>
-<li id="home-client-nam-kwong-mooncake"><div class="client-mark"><img alt="南光文創 · 萬豪軒" data-alt-zh="南光文創 · 萬豪軒" data-alt-zh-hant="南光文創 · 萬豪軒" height="2129" loading="lazy" src="assets/clients/nam-kwong-mooncake.png" width="5721"/></div></li>
-<li id="home-client-digitalbay"><div class="client-mark dark"><img alt="DigitalBay（澳门）" data-alt-zh="DigitalBay（澳门）" data-alt-zh-hant="DigitalBay（澳門）" height="76" loading="lazy" src="assets/clients/digitalbay.png" width="430"/></div></li>
-<li id="home-client-macau-grand-prix-museum"><div class="client-mark"><img alt="澳门大赛车博物馆" data-alt-zh="澳门大赛车博物馆" data-alt-zh-hant="澳門大賽車博物館" height="145" loading="lazy" src="assets/clients/macau-grand-prix-museum.png" width="406"/></div></li>
-</ul></section>
-<section class="contact wrap" id="contact"><p class="eyebrow dark">LET’S MAKE SOMETHING THAT MATTERS.</p><div class="contact-grid"><div><h2 data-en="Your next story\nstarts here." data-zh="你的下一段故事，\n从这里开始。" data-zh-hant="你的下一段故事，\n從這裏開始。">你的下一段故事，<br/>从这里开始。</h2><a class="email" data-en="Email the studio ↗" data-zh="邮件咨询 ↗" data-zh-hant="郵件諮詢 ↗" href="mailto:max020819@gmail.com">邮件咨询 ↗</a><p class="contact-note" data-en="WeChat / Phone: +853 6536 4953\nZhongshan · Hengqin · Guangzhou · Shenzhen" data-zh="微信 / 电话：+853 6536 4953\n中山 · 珠海横琴 · 广州 · 深圳" data-zh-hant="微信 / 電話：+853 6536 4953\n中山 · 珠海橫琴 · 廣州 · 深圳">微信 / 电话：+853 6536 4953<br/>中山 · 珠海横琴 · 广州 · 深圳</p><a class="text-link" data-en="Our work on Xiaohongshu ↗" data-zh="小红书作品 ↗" data-zh-hant="小紅書作品 ↗" href="https://xhslink.cn/o/Ad92f0nFBJX" rel="noopener" target="_blank">小红书作品 ↗</a></div><form id="brief"><label><span data-en="Your name / Company" data-zh="怎么称呼你 / 公司" data-zh-hant="怎麼稱呼你 / 公司">怎么称呼你 / 公司</span><input autocomplete="organization" maxlength="100" name="name" required=""/></label><label><span data-en="What do you have in mind?" data-zh="需要什么合作" data-zh-hant="需要什麼合作">需要什么合作</span><select name="service"><option data-en="Photography" data-zh="商业摄影" data-zh-hant="商業攝影">商业摄影</option><option data-en="Brand films" data-zh="宣传片与视频" data-zh-hant="宣傳片與影片">宣传片与视频</option><option data-en="Social media marketing" data-zh="社交媒体营销" data-zh-hant="社交媒體營銷">社交媒体营销</option><option data-en="Footage licensing" data-zh="影像素材授权" data-zh-hant="影像素材授權">影像素材授权</option></select></label><label><span data-en="Location, timing, budget and brief" data-zh="项目地点、时间、预算和需求" data-zh-hant="項目地點、時間、預算和需求">项目地点、时间、预算和需求</span><textarea maxlength="1800" name="details" required="" rows="3"></textarea></label><div class="form-actions"><button class="submit" data-en="Create inquiry email ↗" data-zh="生成合作邮件 ↗" data-zh-hant="生成合作郵件 ↗" type="submit">生成合作邮件 ↗</button><button data-en="Copy brief" data-zh="复制需求" data-zh-hant="複製需求" id="copyBrief" type="button">复制需求</button></div><p class="fine" data-en="Opens your email app for you to review and send. You can also copy your brief and contact the studio on WeChat." data-zh="将打开你的邮件应用，由你确认后发送。也可复制需求，通过微信联系工作室。" data-zh-hant="將打開你的郵件應用，由你確認後發送。也可複製需求，通過微信聯繫工作室。">将打开你的邮件应用，由你确认后发送。也可复制需求，通过微信联系工作室。</p><p aria-live="polite" id="formStatus" role="status"></p></form></div></section>
-</main><footer class="wrap footer">© MaxYourWay</footer><script src="language.js"></script><script src="app.js"></script><script src="balanced.js"></script></body></html>
+<noscript>
+<div class="project-fallback">
+<a href="air-macau.html" class="text-link">
+<span class="" data-zh="澳门航空" data-zh-hant="澳門航空" data-en="Air Macau" >澳门航空</span>
+</a>
+<a href="mitco.html" class="text-link">
+<span class="" data-zh="MITCO · 意乡人" data-zh-hant="MITCO · 意鄉人" data-en="MITCO" >MITCO · 意乡人</span>
+</a>
+<a href="basic-life.html" class="text-link">
+<span class="" data-zh="康礎 Basic Life" data-zh-hant="康礎 Basic Life" data-en="Basic Life" >康礎 Basic Life</span>
+</a>
+<a href="ifbrand.html" class="text-link">
+<span class="" data-zh="IFBRAND" data-zh-hant="IFBRAND" data-en="IFBRAND" >IFBRAND</span>
+</a>
+<a href="films.html#godox" class="text-link">
+<span class="" data-zh="神牛" data-zh-hant="神牛" data-en="Godox" >神牛</span>
+</a>
+<a href="films.html#crowne-plaza" class="text-link">
+<span class="" data-zh="澳门皇冠假日酒店" data-zh-hant="澳門皇冠假日酒店" data-en="Crowne Plaza Macau" >澳门皇冠假日酒店</span>
+</a>
+<a href="films.html#hotex" class="text-link">
+<span class="" data-zh="康达石材" data-zh-hant="康達石材" data-en="Kangda Stone" >康达石材</span>
+</a>
+<a href="social.html#creators" class="text-link">
+<span class="" data-zh="澳门国际创作者" data-zh-hant="澳門國際創作者" data-en="International creators in Macao" >澳门国际创作者</span>
+</a>
+</div>
+</noscript>
+</section>
+<section class="section photography" id="photography">
+<div class="section-heading">
+<div>
+<p class="eyebrow">PHOTOGRAPHY</p>
+<h2 class="" data-zh="摄影作品" data-zh-hant="攝影作品" data-en="Photography" >摄影作品</h2>
+</div>
+<div class="section-heading-side">
+<p class="" data-zh="空间、商品、人物与活动，直接浏览拍摄案例。" data-zh-hant="空間、商品、人物與活動，直接瀏覽拍攝案例。" data-en="Spaces, products, people and events. Explore the work." >空间、商品、人物与活动，直接浏览拍摄案例。</p>
+<a href="photography.html" class="text-link">
+<span class="" data-zh="全部摄影作品" data-zh-hant="全部攝影作品" data-en="All photography" >全部摄影作品</span>
+</a>
+</div>
+</div>
+<div class="photo-grid">
+<article class="photo-card">
+<a class="photo-cover " href="space-pousada.html" aria-label="圣地牙哥古堡酒店">
+<img src="assets/spaces/pousada-suite-bedroom.webp" alt="" loading="eager" decoding="async"/>
+</a>
+<div class="photo-caption">
+<p class="eyebrow" data-zh="酒店与空间" data-zh-hant="酒店與空間" data-en="Hotels &amp; spaces" >酒店与空间</p>
+<h3>
+<a href="space-pousada.html">
+<span class="" data-zh="圣地牙哥古堡酒店" data-zh-hant="聖地牙哥古堡酒店" data-en="Pousada de São Tiago" >圣地牙哥古堡酒店</span>
+</a>
+</h3>
+<a href="photography.html#spaces" class="text-link">
+<span class="" data-zh="浏览此类摄影" data-zh-hant="瀏覽此類攝影" data-en="Explore the category" >浏览此类摄影</span>
+</a>
+</div>
+</article>
+<article class="photo-card">
+<a class="photo-cover " href="photography.html#live-diasorin" aria-label="DiaSorin APAC">
+<img src="assets/events/live-diasorin-2.webp" alt="" loading="eager" decoding="async"/>
+</a>
+<div class="photo-caption">
+<p class="eyebrow" data-zh="活动及图片直播" data-zh-hant="活動及相片直播" data-en="Events &amp; live photography" >活动及图片直播</p>
+<h3>
+<a href="photography.html#live-diasorin">
+<span class="" data-zh="DiaSorin APAC" data-zh-hant="DiaSorin APAC" data-en="DiaSorin APAC" >DiaSorin APAC</span>
+</a>
+</h3>
+<a href="photography.html#live-albums" class="text-link">
+<span class="" data-zh="浏览此类摄影" data-zh-hant="瀏覽此類攝影" data-en="Explore the category" >浏览此类摄影</span>
+</a>
+</div>
+</article>
+<article class="photo-card">
+<a class="photo-cover is-paired" href="wang-xiaomin.html" aria-label="汪小敏">
+<img src="assets/events/wang-weibo-01.webp" alt="汪小敏公开造型照" loading="eager" decoding="async"/>
+<img src="assets/events/wang-weibo-03.webp" alt="汪小敏公开造型照" loading="eager" decoding="async"/>
+</a>
+<div class="photo-caption">
+<p class="eyebrow" data-zh="人物与形象" data-zh-hant="人物與形象" data-en="Portraits" >人物与形象</p>
+<h3>
+<a href="wang-xiaomin.html">
+<span class="" data-zh="汪小敏" data-zh-hant="汪小敏" data-en="Wang Xiaomin" >汪小敏</span>
+</a>
+</h3>
+<a href="photography.html#people" class="text-link">
+<span class="" data-zh="浏览此类摄影" data-zh-hant="瀏覽此類攝影" data-en="Explore the category" >浏览此类摄影</span>
+</a>
+<a class="portrait-download" href="assets/downloads/MaxYourWay%20Portrait%20%26%20Lifestyle%20Portfolio.pdf" download="MaxYourWay Portrait &amp; Lifestyle Portfolio.pdf">
+<span class="" data-zh="下载人像作品集 · PDF" data-zh-hant="下載人像作品集 · PDF" data-en="Download portrait portfolio · PDF" >下载人像作品集 · PDF</span>
+</a>
+</div>
+</article>
+<article class="photo-card">
+<a class="photo-cover " href="clerigos.html" aria-label="卡爾圖葡式麵包">
+<img src="assets/library/clerigos-sandwich.webp" alt="" loading="eager" decoding="async"/>
+</a>
+<div class="photo-caption">
+<p class="eyebrow" data-zh="餐饮与商品" data-zh-hant="餐飲與商品" data-en="Food &amp; products" >餐饮与商品</p>
+<h3>
+<a href="clerigos.html">
+<span class="" data-zh="卡爾圖葡式麵包" data-zh-hant="卡爾圖葡式麵包" data-en="Clérigos" >卡爾圖葡式麵包</span>
+</a>
+</h3>
+<a href="photography.html#products" class="text-link">
+<span class="" data-zh="浏览此类摄影" data-zh-hant="瀏覽此類攝影" data-en="Explore the category" >浏览此类摄影</span>
+</a>
+</div>
+</article>
+<article class="photo-card">
+<a class="photo-cover is-paired" href="macao-film-festival.html" aria-label="澳门国际电影节">
+<img src="assets/events/liu-2023-portrait.webp" alt="" loading="eager" decoding="async"/>
+<img src="assets/events/liu-2022-portrait.webp" alt="" loading="eager" decoding="async"/>
+</a>
+<div class="photo-caption">
+<p class="eyebrow" data-zh="演出与电影节" data-zh-hant="演出與電影節" data-en="Performance &amp; festivals" >演出与电影节</p>
+<h3>
+<a href="macao-film-festival.html">
+<span class="" data-zh="澳门国际电影节" data-zh-hant="澳門國際電影節" data-en="Macao International Movie Festival" >澳门国际电影节</span>
+</a>
+</h3>
+<a href="photography.html#performances" class="text-link">
+<span class="" data-zh="浏览此类摄影" data-zh-hant="瀏覽此類攝影" data-en="Explore the category" >浏览此类摄影</span>
+</a>
+</div>
+</article>
+<article class="photo-card">
+<a class="photo-cover is-paired" href="weddings.html" aria-label="澳门领证跟拍">
+<img src="assets/weddings/sunflower-ceremony-07-sm.webp" alt="" loading="eager" decoding="async"/>
+<img src="assets/weddings/sunflower-ceremony-05-sm.webp" alt="粉色拱门前，新郎抱起手持向日葵的新娘" loading="eager" decoding="async"/>
+</a>
+<div class="photo-caption">
+<p class="eyebrow" data-zh="婚礼与领证" data-zh-hant="婚禮與領證" data-en="Weddings" >婚礼与领证</p>
+<h3>
+<a href="weddings.html">
+<span class="" data-zh="澳门领证跟拍" data-zh-hant="澳門領證跟拍" data-en="Macao weddings" >澳门领证跟拍</span>
+</a>
+</h3>
+<a href="photography.html#weddings" class="text-link">
+<span class="" data-zh="浏览此类摄影" data-zh-hant="瀏覽此類攝影" data-en="Explore the category" >浏览此类摄影</span>
+</a>
+</div>
+</article>
+</div>
+</section>
+<section class="section about" id="about">
+<div class="about-image">
+<img src="assets/spaces/sofitel-waterfront.webp" srcset="assets/spaces/sofitel-waterfront-660.webp 660w, assets/spaces/sofitel-waterfront.webp 1440w" sizes="(max-width:650px) 90vw, 45vw" alt="澳门内港与城市天际线航拍" loading="lazy" width="1440" height="787"/>
+</div>
+<div class="about-copy">
+<p class="eyebrow">THE STUDIO</p>
+<h2 class="" data-zh="关于工作室" data-zh-hant="關於工作室" data-en="The studio" >关于工作室</h2>
+<p class="" data-zh="MaxYourWay 为澳门及大湾区的酒店、品牌和机构提供社交媒体内容策划与制作、商业摄影及品牌宣传片制作。拍摄范围涵盖酒店客房与室内空间、餐饮及商品摄影、活动纪实与照片直播。" data-zh-hant="MaxYourWay 為澳門及大灣區的酒店、品牌及機構提供社交媒體內容策劃及製作、商業攝影及品牌宣傳片製作。拍攝範圍涵蓋酒店客房與室內空間、餐飲及商品攝影、活動紀錄及相片直播。" data-en="MaxYourWay produces social media content, commercial photography and brand films for hotels, brands and organisations in Macao and the Greater Bay Area. Our photography covers hotel rooms and interiors, food and products, and event coverage with live photo delivery." >MaxYourWay 为澳门及大湾区的酒店、品牌和机构提供社交媒体内容策划与制作、商业摄影及品牌宣传片制作。拍摄范围涵盖酒店客房与室内空间、餐饮及商品摄影、活动纪实与照片直播。</p>
+<p class="" data-zh="我们曾为澳门航空制作 100 条目的地短片，并拍摄酒店主厨系列及企业厂房专题。从前期策划、现场拍摄到剪辑及修图，我们按社交平台、酒店预订平台及品牌宣传的需要交付成品。" data-zh-hant="我們曾為澳門航空製作 100 條目的地短片，並拍攝酒店主廚系列及企業廠房專題。由前期策劃、現場拍攝到剪接及相片後期製作，我們按社交平台、酒店預訂平台及品牌宣傳的需要交付成品。" data-en="Our projects include 100 destination shorts for Air Macau, hotel chef series and films inside manufacturing facilities. We handle planning, filming, editing and retouching, and deliver work for social channels, hotel booking platforms and brand campaigns." >我们曾为澳门航空制作 100 条目的地短片，并拍摄酒店主厨系列及企业厂房专题。从前期策划、现场拍摄到剪辑及修图，我们按社交平台、酒店预订平台及品牌宣传的需要交付成品。</p>
+<a href="clients.html" class="text-link">
+<span class="" data-zh="查看合作品牌" data-zh-hant="查看合作品牌" data-en="Clients &amp; collaborators" >查看合作品牌</span>
+</a>
+</div>
+</section>
+<section class="section collaborations" id="clients">
+<div class="section-heading">
+<div>
+<p class="eyebrow">CLIENTS & COLLABORATORS</p>
+<h2 class="" data-zh="合作品牌与机构" data-zh-hant="合作品牌與機構" data-en="Clients &amp; collaborators" >合作品牌与机构</h2>
+</div>
+<div class="section-heading-side">
+<p class="" data-zh="部分合作及参与项目" data-zh-hant="部分合作及參與項目" data-en="Selected commissioned and collaborative projects." >部分合作及参与项目</p>
+<a href="clients.html" class="text-link">
+<span class="" data-zh="查看合作案例" data-zh-hant="查看合作案例" data-en="Client projects" >查看合作案例</span>
+</a>
+</div>
+</div>
+<ul class="client-grid">
+<li id="home-client-air-macau" class="">
+<a href="air-macau.html" aria-label="澳门航空">
+<img src="assets/clients/air-macau.png" alt="澳门航空" loading="lazy" decoding="async"/>
+</a>
+</li>
+<li id="home-client-crowne-plaza-macau" class="">
+<a href="crowne-plaza.html" aria-label="澳门皇冠假日酒店">
+<img src="assets/clients/crowne-plaza-macau.png" alt="澳门皇冠假日酒店" loading="lazy" decoding="async"/>
+</a>
+</li>
+<li id="home-client-w-macau" class="">
+<a href="space-w-macau.html" aria-label="澳门新濠影汇 W 酒店">
+<img src="assets/clients/w-macau.png" alt="澳门新濠影汇 W 酒店" loading="lazy" decoding="async"/>
+</a>
+</li>
+<li id="home-client-godox" class="">
+<a href="films.html#godox" aria-label="神牛">
+<img src="assets/clients/godox.svg" alt="神牛" loading="lazy" decoding="async"/>
+</a>
+</li>
+<li id="home-client-huawei" class="">
+<div>
+<img src="assets/clients/huawei.svg" alt="华为" loading="lazy" decoding="async"/>
+</div>
+</li>
+<li id="home-client-china-southern" class="">
+<div>
+<img src="assets/clients/china-southern.png" alt="中国南方航空" loading="lazy" decoding="async"/>
+</div>
+</li>
+<li id="home-client-yutong" class="">
+<a href="photography.html#live-yutong" aria-label="宇通">
+<img src="assets/clients/yutong.svg" alt="宇通" loading="lazy" decoding="async"/>
+</a>
+</li>
+<li id="home-client-diasorin" class="">
+<a href="photography.html#live-diasorin" aria-label="DiaSorin APAC">
+<img src="assets/clients/diasorin.svg" alt="DiaSorin APAC" loading="lazy" decoding="async"/>
+</a>
+</li>
+<li id="home-client-hilton-huizhou" class="">
+<div>
+<img src="assets/clients/hilton-huizhou.svg" alt="惠州希尔顿花园 · 惠州中海希尔顿" loading="lazy" decoding="async"/>
+</div>
+</li>
+<li id="home-client-sofitel-macau" class="">
+<a href="space-sofitel.html" aria-label="澳门十六浦索菲特酒店">
+<img src="assets/clients/sofitel-macau.svg" alt="澳门十六浦索菲特酒店" loading="lazy" decoding="async"/>
+</a>
+</li>
+<li id="home-client-new-loyalty" class="">
+<a href="space-pousada.html" aria-label="新忠诚集团">
+<img src="assets/clients/new-loyalty.png" alt="新忠诚集团" loading="lazy" decoding="async"/>
+</a>
+</li>
+<li id="home-client-pousada-de-sao-tiago" class="">
+<a href="space-pousada.html" aria-label="澳门圣地牙哥古堡酒店">
+<img src="assets/clients/pousada-de-sao-tiago.png" alt="澳门圣地牙哥古堡酒店" loading="lazy" decoding="async"/>
+</a>
+</li>
+<li id="home-client-chimelong" class="">
+<div>
+<img src="assets/clients/chimelong.png" alt="横琴长隆企鹅酒店 · 横琴湾酒店" loading="lazy" decoding="async"/>
+</div>
+</li>
+<li id="home-client-chimelong-hengqin" class="">
+<div>
+<img src="assets/clients/chimelong-hengqin.png" alt="横琴湾酒店" loading="lazy" decoding="async"/>
+</div>
+</li>
+<li id="home-client-specialized" class="">
+<div>
+<img src="assets/clients/specialized.svg" alt="Specialized 闪电" loading="lazy" decoding="async"/>
+</div>
+</li>
+<li id="home-client-mgto" class="">
+<div>
+<img src="assets/clients/mgto.svg" alt="澳门特别行政区政府旅游局" loading="lazy" decoding="async"/>
+</div>
+</li>
+<li id="home-client-macao-polytechnic" class="">
+<div>
+<img src="assets/clients/macao-polytechnic.svg" alt="澳门理工大学" loading="lazy" decoding="async"/>
+</div>
+</li>
+<li id="home-client-henan-daily" class="">
+<a href="films.html#henan-daily-films" aria-label="河南日报">
+<img src="assets/clients/henan-masthead.png" alt="河南日报" loading="lazy" decoding="async"/>
+</a>
+</li>
+<li id="home-client-dahe" class="">
+<div>
+<img src="assets/clients/dahe-masthead.png" alt="大河报" loading="lazy" decoding="async"/>
+</div>
+</li>
+<li id="home-client-clerigos" class="dark-mark">
+<a href="clerigos.html" aria-label="卡爾圖葡式麵包">
+<img src="assets/clients/clerigos.png" alt="卡爾圖葡式麵包" loading="lazy" decoding="async"/>
+</a>
+</li>
+<li id="home-client-chinlam-whisky" class="dark-mark">
+<a href="chinlam-whisky.html" aria-label="千林威士忌">
+<img src="assets/clients/chinlam-whisky.png" alt="千林威士忌" loading="lazy" decoding="async"/>
+</a>
+</li>
+<li id="home-client-ifbrandsourcing" class="dark-mark">
+<a href="social.html#ifbrand" aria-label="IFBrandSourcing">
+<img src="assets/clients/ifbrandsourcing.png" alt="IFBrandSourcing" loading="lazy" decoding="async"/>
+</a>
+</li>
+<li id="home-client-mitco" class="">
+<a href="social.html#mitco" aria-label="MITCO">
+<img src="assets/clients/mitco.png" alt="MITCO" loading="lazy" decoding="async"/>
+</a>
+</li>
+<li id="home-client-higgs-design" class="">
+<a href="films.html#hotex" aria-label="Higgs Design">
+<img src="assets/clients/higgs-design.png" alt="Higgs Design" loading="lazy" decoding="async"/>
+</a>
+</li>
+<li id="home-client-kangda-stone" class="dark-mark">
+<a href="films.html#hotex" aria-label="康达石材">
+<img src="assets/clients/kangda-stone.png" alt="康达石材" loading="lazy" decoding="async"/>
+</a>
+</li>
+<li id="home-client-macau-catholic-center" class="">
+<div>
+<img src="assets/clients/macau-catholic-center.png" alt="澳门公教中心" loading="lazy" decoding="async"/>
+</div>
+</li>
+<li id="home-client-basic-life" class="">
+<a href="social.html#basiclife" aria-label="澳门康礎">
+<img src="assets/clients/basic-life.png" alt="澳门康礎" loading="lazy" decoding="async"/>
+</a>
+</li>
+<li id="home-client-inner" class="">
+<a href="space-inner.html" aria-label="由然">
+<img src="assets/clients/inner.png" alt="由然" loading="lazy" decoding="async"/>
+</a>
+</li>
+<li id="home-client-mobai" class="">
+<a href="space-mobai.html" aria-label="墨白城市酒窖">
+<img src="assets/clients/mobai.png" alt="墨白城市酒窖" loading="lazy" decoding="async"/>
+</a>
+</li>
+<li id="home-client-laltro" class="">
+<div>
+<img src="assets/clients/laltro.png" alt="L’Altro 澳门" loading="lazy" decoding="async"/>
+</div>
+</li>
+<li id="home-client-art-center" class="">
+<a href="photography.html#live-nam-van" aria-label="南湾心麗美容中心">
+<img src="assets/clients/art-center.png" alt="南湾心麗美容中心" loading="lazy" decoding="async"/>
+</a>
+</li>
+<li id="home-client-sao-le-tour-market" class="">
+<div>
+<img src="assets/clients/sao-le-tour-market.png" alt="旭日物业" loading="lazy" decoding="async"/>
+</div>
+</li>
+<li id="home-client-nam-kwong-mooncake" class="">
+<div>
+<img src="assets/clients/nam-kwong-mooncake.png" alt="南光文創 · 萬豪軒" loading="lazy" decoding="async"/>
+</div>
+</li>
+<li id="home-client-digitalbay" class="dark-mark">
+<div>
+<img src="assets/clients/digitalbay.png" alt="DigitalBay（澳门）" loading="lazy" decoding="async"/>
+</div>
+</li>
+<li id="home-client-macau-grand-prix-museum" class="">
+<div>
+<img src="assets/clients/macau-grand-prix-museum.png" alt="澳门大赛车博物馆" loading="lazy" decoding="async"/>
+</div>
+</li>
+</ul>
+</section>
+<section class="contact-section" id="contact">
+<p class="eyebrow dark">LET’S MAKE SOMETHING THAT MATTERS.</p>
+<div class="contact-grid">
+<div>
+<h2 data-en="Your next story\nstarts here." data-zh="你的下一段故事，\n从这里开始。" data-zh-hant="你的下一段故事，\n從這裏開始。">你的下一段故事，<br>从这里开始。</h2>
+<a class="email" data-en="Email the studio ↗" data-zh="邮件咨询 ↗" data-zh-hant="郵件諮詢 ↗" href="mailto:max020819@gmail.com">邮件咨询 ↗</a>
+<div class="contact-channels">
+<p>
+<span class="" data-zh="微信 / WhatsApp" data-zh-hant="微信 / WhatsApp" data-en="WeChat / WhatsApp" >微信 / WhatsApp</span>
+<a href="https://wa.me/85365364953" aria-label="通过 WhatsApp 联系" data-aria-label-zh="通过 WhatsApp 联系" data-aria-label-zh-hant="透過 WhatsApp 聯繫" data-aria-label-en="Contact on WhatsApp">+853 6536 4953</a>
+</p>
+<p>
+<span class="" data-zh="电话" data-zh-hant="電話" data-en="Phone" >电话</span>
+<a href="tel:+8617688178964">176 8817 8964</a>
+</p>
+</div>
+<p class="contact-note" data-zh="服务地区：澳门 · 中山 · 珠海横琴 · 广州 · 深圳" data-zh-hant="服務地區：澳門 · 中山 · 珠海橫琴 · 廣州 · 深圳" data-en="Service areas: Macao · Zhongshan · Hengqin · Guangzhou · Shenzhen" >服务地区：澳门 · 中山 · 珠海横琴 · 广州 · 深圳</p>
+<a class="text-link" data-en="Our work on Xiaohongshu ↗" data-zh="小红书作品 ↗" data-zh-hant="小紅書作品 ↗" href="https://xhslink.cn/o/Ad92f0nFBJX" rel="noopener" target="_blank">小红书作品 ↗</a>
+</div>
+<form id="brief">
+<label>
+<span data-en="Your name / Company" data-zh="怎么称呼你 / 公司" data-zh-hant="怎麼稱呼你 / 公司">怎么称呼你 / 公司</span>
+<input autocomplete="organization" maxlength="100" name="name" required="">
+</label>
+<label>
+<span data-en="What do you have in mind?" data-zh="需要什么合作" data-zh-hant="需要什麼合作">需要什么合作</span>
+<select name="service">
+<option data-en="Photography" data-zh="商业摄影" data-zh-hant="商業攝影">商业摄影</option>
+<option data-en="Brand films" data-zh="宣传片与视频" data-zh-hant="宣傳片與影片">宣传片与视频</option>
+<option data-en="Social media marketing" data-zh="社交媒体营销" data-zh-hant="社交媒體營銷">社交媒体营销</option>
+<option data-en="Footage licensing" data-zh="影像素材授权" data-zh-hant="影像素材授權">影像素材授权</option>
+</select>
+</label>
+<label>
+<span data-en="Location, timing, budget and brief" data-zh="项目地点、时间、预算和需求" data-zh-hant="項目地點、時間、預算和需求">项目地点、时间、预算和需求</span>
+<textarea maxlength="1800" name="details" required="" rows="3">
+</textarea>
+</label>
+<div class="form-actions">
+<button class="submit" data-en="Create inquiry email ↗" data-zh="生成合作邮件 ↗" data-zh-hant="生成合作郵件 ↗" type="submit">生成合作邮件 ↗</button>
+<button data-en="Copy brief" data-zh="复制需求" data-zh-hant="複製需求" id="copyBrief" type="button">复制需求</button>
+</div>
+<p class="fine" data-en="Opens your email app for you to review and send. You can also copy your brief and contact the studio on WeChat." data-zh="将打开你的邮件应用，由你确认后发送。也可复制需求，通过微信联系工作室。" data-zh-hant="將打開你的郵件應用，由你確認後發送。也可複製需求，通過微信聯繫工作室。">将打开你的邮件应用，由你确认后发送。也可复制需求，通过微信联系工作室。</p>
+<p aria-live="polite" id="formStatus" role="status">
+</p>
+</form>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<a class="brand" href="index.html#top" aria-label="MaxYourWay">
+<img src="assets/maxyourway-ink.png" alt="" width="32" height="32"/>
+<strong>Max<span>Your</span>Way</strong>
+</a>
+<p>Photography · Films · Social content</p>
+<span>© MaxYourWay</span>
+<a href="#top">
+<span class="" data-zh="回到顶部" data-zh-hant="回到頂部" data-en="Back to top" >回到顶部</span>
+</a>
+</footer>
+<script id="home-project-data" type="application/json">[{"ordinal": 0, "category": "social", "title": {"zh": "澳门航空", "zhHant": "澳門航空", "en": "Air Macau"}, "label": {"zh": "100 条目的地短片", "zhHant": "100 條目的地短片", "en": "100 destination shorts"}, "description": {"zh": "为澳门航空制作 100 条目的地及航线短片，涵盖首航活动、登机牌礼遇与在澳体验。", "zhHant": "為澳門航空製作 100 條目的地及航線短片，涵蓋首航活動、登機牌禮遇與在澳體驗。", "en": "100 destination and route shorts for Air Macau, covering inaugural flights, boarding-pass offers and experiences in Macao."}, "href": "air-macau.html", "front": [{"src": "assets/social/air-macau-airport-cover.webp", "alt": "澳门国际机场停机坪上的澳门航空客机"}], "back": [{"src": "assets/social/air-macau-cockpit-cover.webp", "alt": "澳门航空模拟驾驶舱"}]}, {"ordinal": 1, "category": "social", "title": {"zh": "MITCO · 意乡人", "zhHant": "MITCO · 意鄉人", "en": "MITCO"}, "label": {"zh": "跨境社媒月度合作", "zhHant": "跨境社媒月度合作", "en": "Cross-border social retainer"}, "description": {"zh": "跨境社媒月度合作。围绕意大利房产、教育及生活方式，提供双语内容策划、拍摄指引、剪辑调色、图文制作与多平台发布安排。", "zhHant": "跨境社媒月度合作。圍繞意大利物業、教育及生活方式，提供雙語內容策劃、拍攝指引、剪接調色、圖文製作及多平台發佈安排。", "en": "An ongoing cross-border retainer covering property, education and lifestyle, with bilingual planning, filming guidance, post-production, graphics and multi-platform publishing."}, "href": "mitco.html", "front": [{"src": "assets/social/mitco-italy-aerial-cover.webp", "alt": "意大利阿布鲁佐山村航拍"}], "back": [{"src": "assets/social/mitco-italy-village-cover.webp", "alt": "阿布鲁佐山村与教堂航拍"}]}, {"ordinal": 2, "category": "social", "title": {"zh": "康礎 Basic Life", "zhHant": "康礎 Basic Life", "en": "Basic Life"}, "label": {"zh": "9 条粤语物理治疗短片", "zhHant": "9 條粵語物理治療短片", "en": "9 Cantonese physiotherapy shorts"}, "description": {"zh": "为康礎制作粤语社媒系列影片，以物理治疗示范及日常健康问题为主题，配合繁体字幕，供品牌持续发布。", "zhHant": "為康礎製作粵語社媒系列影片，以物理治療示範及日常健康問題為主題，配合繁體字幕，供品牌持續發佈。", "en": "A Cantonese social video series for Basic Life, combining physiotherapy demonstrations and everyday health topics with Traditional Chinese subtitles."}, "href": "basic-life.html", "front": [{"src": "assets/social/basic-life-ig-cover.webp", "alt": "康礎 MRI 科普影片的 IG 竖屏封面"}], "back": [{"src": "assets/social/basic-life-ig-public.jpg", "alt": "康礎 Instagram 公开影片截图"}], "portrait": true}, {"ordinal": 12, "category": "social", "title": {"zh": "IFBRAND", "zhHant": "IFBRAND", "en": "IFBRAND"}, "label": {"zh": "工厂系列", "zhHant": "工廠系列", "en": "Factory films"}, "description": {"zh": "走进生产现场，记录不同产品的制造过程和工厂运作。", "zhHant": "走進生產現場，記錄不同產品的製造過程和工廠運作。", "en": "A factory series showing how products are made and how each facility operates."}, "href": "ifbrand.html", "front": [{"src": "assets/social/ifbrand-landscape-front.webp", "alt": ""}], "back": [{"src": "assets/social/ifbrand-landscape-back.webp", "alt": ""}]}, {"ordinal": 7, "category": "films", "title": {"zh": "神牛", "zhHant": "神牛", "en": "Godox"}, "label": {"zh": "产品宣传片", "zhHant": "產品宣傳片", "en": "Product films"}, "description": {"zh": "为神牛制作三条产品影片，展示 P8 像素光效、可调柔光屏及 GF18M 电动菲涅尔透镜的功能与应用。", "zhHant": "為神牛製作三條產品影片，展示 P8 像素光效、可調柔光屏及 GF18M 電動菲涅爾透鏡的功能與應用。", "en": "Three product films for Godox, demonstrating P8 pixel effects, the adjustable diffusion panel and the GF18M motorised Fresnel lens."}, "href": "films.html#godox", "front": [{"src": "assets/library/godox-fresnel.webp", "alt": ""}], "back": [{"src": "assets/library/godox-gf18m-excerpt-poster.webp", "alt": ""}]}, {"ordinal": 4, "category": "films", "title": {"zh": "澳门皇冠假日酒店", "zhHant": "澳門皇冠假日酒店", "en": "Crowne Plaza Macau"}, "label": {"zh": "主厨形象片", "zhHant": "主廚形象片", "en": "Chef portrait film"}, "description": {"zh": "镜头从街市选材跟到后厨，呈现皇厨中餐厅主厨和团队的日常。", "zhHant": "鏡頭從街市選材跟到後廚，呈現皇廚中餐廳主廚和團隊的日常。", "en": "From the market to the kitchen, this film follows the chef and team at Imperial Kitchen."}, "href": "films.html#crowne-plaza", "front": [{"src": "assets/library/crowne-chef-centred-cover.webp", "alt": "主厨站在画面中央，抱臂看向镜头"}], "back": [{"src": "assets/portfolio/chef-6.webp", "alt": ""}]}, {"ordinal": 11, "category": "films", "title": {"zh": "康达石材", "zhHant": "康達石材", "en": "Kangda Stone"}, "label": {"zh": "企业宣传片", "zhHant": "企業宣傳片", "en": "Company film"}, "description": {"zh": "通过 Higgs Design 合作，为康达石材记录生产现场与加工流程。", "zhHant": "通過 Higgs Design 合作，為康達石材記錄生產現場與加工流程。", "en": "A film for Kangda Stone, produced through Higgs Design, following the production floor and stone processing."}, "href": "films.html#hotex", "front": [{"src": "assets/library/hotex-stone-excerpt-poster.webp", "alt": ""}], "back": [{"src": "assets/library/hotex-film.webp", "alt": ""}]}, {"ordinal": 13, "category": "social", "title": {"zh": "澳门国际创作者", "zhHant": "澳門國際創作者", "en": "International creators in Macao"}, "label": {"zh": "创作者合作", "zhHant": "創作者合作", "en": "Creator collaborations"}, "description": {"zh": "在澳门为国际创作者拍摄酒店、城市体验与活动内容。", "zhHant": "在澳門為國際創作者拍攝酒店、城市體驗與活動內容。", "en": "Photography and social content for international creators covering Macao hotels, city experiences and events."}, "href": "social.html#creators", "front": [{"src": "assets/creators/handa-skycab-post.webp", "alt": ""}], "back": [{"src": "assets/creators/lex-published-1.webp", "alt": ""}]}]</script>
+<script src="language.js">
+</script>
+<script src="app.js">
+</script>
+<script src="c-home.js">
+</script>
+</body>
+</html>
