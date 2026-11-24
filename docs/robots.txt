@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://max-0289.github.io/maxyourway/sitemap.xml

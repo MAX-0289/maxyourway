@@ -6,20 +6,8 @@
   color: var(--paper);
   margin-bottom: 30px;
 }
-.marked-photo { position: relative; overflow: hidden; min-width: 0; background: #25302a; }
+.marked-photo { position: relative; overflow: hidden; min-width: 0; background: #e4e8e1; }
 .marked-photo img { display: block; height: 100%; width: 100%; object-fit: cover; transition: transform .45s ease; }
-.marked-photo::after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 5%;
-  right: 4.5%;
-  width: clamp(23px,7.6%,72px);
-  aspect-ratio: 680/465;
-  background: url("assets/maxyourway-white.png") center / contain no-repeat;
-  filter: drop-shadow(0 1px 2px #1118);
-  pointer-events: none;
-}
 .feature-photo { min-height: 290px; }
 .feature-photo img { position: absolute; object-position: 73% 51%; }
 .feature-copy { align-self: center; padding: clamp(30px, 4vw, 60px); }
