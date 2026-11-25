@@ -1,7 +1,8 @@
 (() => {
   'use strict';
   const projects = JSON.parse(document.querySelector('#home-project-data').textContent);
-  const buttons = [...document.querySelectorAll('[data-case]')];
+  const rows = [...document.querySelectorAll('.case-item')];
+  const buttons = rows.map(row => row.querySelector('[data-case]'));
   const filters = [...document.querySelectorAll('[data-filter]')];
   const stage = document.querySelector('#case-stage');
   const front = stage.querySelector('.case-front');
@@ -82,7 +83,7 @@
     button.addEventListener('keydown', event => {
       if (!['ArrowDown', 'ArrowUp'].includes(event.key)) return;
       event.preventDefault();
-      const visible = buttons.filter(item => !item.hidden);
+      const visible = buttons.filter((_, index) => !rows[index].hidden);
       const position = visible.indexOf(button);
       const target = visible[(position + (event.key === 'ArrowDown' ? 1 : visible.length - 1)) % visible.length];
       target.focus({ preventScroll: true });
@@ -104,8 +105,8 @@
     stage.removeAttribute('aria-busy');
     category = ['all', 'social', 'films'].includes(value) ? value : 'all';
     filters.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === category)));
-    buttons.forEach(button => { button.hidden = category !== 'all' && button.dataset.category !== category; });
-    if (buttons[selected].hidden) choose(Number(buttons.find(button => !button.hidden).dataset.case));
+    rows.forEach((row, index) => { row.hidden = category !== 'all' && buttons[index].dataset.category !== category; });
+    if (rows[selected].hidden) choose(rows.findIndex(row => !row.hidden));
     if (updateUrl) {
       const url = new URL(location.href);
       if (category === 'all') url.searchParams.delete('category');
