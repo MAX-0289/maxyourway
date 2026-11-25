@@ -1,0 +1,171 @@
+.mgto-page {
+  --mgto-ink: #26342e;
+  --mgto-divider: #d9ddd6;
+  --mgto-muted: #4e5c54;
+  --mgto-paper: #f1f1f1;
+  --mgto-light: #fbfcf9;
+  background: var(--mgto-paper);
+}
+.mgto-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+  gap: clamp(24px, 4vw, 68px);
+  align-items: center;
+  padding-block: clamp(36px, 4.7vw, 76px) clamp(24px, 3.5vw, 54px);
+}
+.mgto-intro h1 {
+  color: var(--mgto-ink);
+  font-size: clamp(2.35rem, 5vw, 5.15rem);
+  line-height: 1.06;
+  margin: 16px 0 18px;
+}
+.mgto-intro h1 span { display: block; }
+.mgto-intro p {
+  color: var(--mgto-muted);
+  font-size: 1.03rem;
+  line-height: 1.68;
+  margin: 0;
+  max-width: 32rem;
+}
+.mgto-intro img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.56;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.mgto-jumps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: clamp(32px, 4vw, 56px);
+}
+.mgto-jumps a, .mgto-link {
+  border: 1px solid #aeb9ad;
+  border-radius: 99px;
+  color: #25392d;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  min-height: 44px;
+  padding: 8px 15px;
+  text-decoration: none;
+}
+.mgto-jumps a:hover, .mgto-link:hover {
+  background: #dee9d9;
+  border-color: #728a74;
+}
+.mgto-section {
+  display: block;
+  margin-bottom: clamp(54px, 7vw, 110px);
+  scroll-margin-top: 110px;
+}
+.mgto-section-heading {
+  color: var(--mgto-ink);
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+  border-top: 1px solid var(--mgto-divider);
+  padding-top: 22px;
+  margin: 0 0 22px;
+}
+.mgto-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: clamp(17px, 2.5vw, 35px);
+}
+.mgto-card {
+  min-width: 0;
+  background: var(--mgto-light);
+  border: 1px solid var(--mgto-divider);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  scroll-margin-top: 100px;
+}
+.mgto-card-copy { padding: 23px 22px 17px; }
+.mgto-card time {
+  color: var(--mgto-muted);
+  font-size: .76rem;
+  font-variant-numeric: tabular-nums;
+}
+.mgto-card h3 {
+  color: var(--mgto-ink);
+  font-size: clamp(1.08rem, 1.6vw, 1.5rem);
+  line-height: 1.35;
+  margin: 7px 0 0;
+}
+.mgto-media {
+  margin-top: auto;
+  padding: 0 20px 20px;
+  display: grid;
+  grid-template-columns: minmax(0,1.24fr) minmax(0,1fr);
+  align-items: start;
+  gap: 12px;
+}
+.mgto-media figure { margin: 0; min-width: 0; }
+.mgto-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.mgto-photo-link {
+  display: block;
+  background: #e8ebe6;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.mgto-post-picture {
+  aspect-ratio: 3 / 4;
+}
+.mgto-post-picture img {
+  object-fit: contain;
+}
+.mgto-media figcaption {
+  color: var(--mgto-muted);
+  font-size: .74rem;
+  line-height: 1.4;
+  padding-top: 4px;
+}
+.mgto-post-area figcaption { padding-top: 6px; }
+.mgto-source-list {
+  display: grid;
+  grid-auto-rows: max-content;
+  gap: 8px;
+}
+.mgto-source-list .mgto-photo-link { aspect-ratio: 2.6; }
+.mgto-source-list img { object-fit: cover; }
+.mgto-link { margin-top: 10px; font-size: .78rem; }
+.mgto-teaser {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 24px;
+  border-block: 1px solid #cdd3c9;
+  padding-block: 27px;
+  margin-block: 34px clamp(40px, 7vw, 80px);
+}
+.mgto-teaser h2 { margin: 0 0 7px; }
+.mgto-teaser p { margin: 0; }
+.mgto-teaser .mgto-link { margin: 0; }
+.mgto-page figure:target { outline: 2px solid #507a5d; outline-offset: 3px; }
+.mgto-page :focus-visible, .mgto-teaser :focus-visible {
+  outline: 2px solid #246443;
+  outline-offset: 3px;
+}
+@media(max-width: 875px) {
+  .mgto-grid { grid-template-columns: minmax(0,1fr); }
+  .mgto-intro { grid-template-columns: minmax(0,1fr); }
+  .mgto-intro img { aspect-ratio: 1.85; }
+  .mgto-source-list .mgto-photo-link { aspect-ratio: 2.45; }
+}
+@media(max-width: 465px) {
+  .mgto-card-copy { padding: 17px 13px 12px; }
+  .mgto-media { padding: 0 12px 14px; gap: 8px; }
+  .mgto-source-list { gap: 5px; }
+  .mgto-source-list .mgto-photo-link { aspect-ratio: 2.15; }
+  .mgto-media figcaption { font-size: .68rem; }
+  .mgto-link { font-size: .73rem; padding-inline: 10px; }
+  .mgto-teaser { grid-template-columns: minmax(0,1fr); row-gap: 12px; }
+  .mgto-teaser .mgto-link { justify-self: start; }
+}
