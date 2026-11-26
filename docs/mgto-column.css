@@ -1,7 +1,7 @@
 .mgto-page {
-  --mgto-ink: #26342e;
-  --mgto-divider: #d9ddd6;
-  --mgto-muted: #4e5c54;
+  --mgto-ink: #202420;
+  --mgto-divider: #cbd0c8;
+  --mgto-muted: #5c635c;
   --mgto-paper: #f1f1f1;
   --mgto-light: #fbfcf9;
   background: var(--mgto-paper);
@@ -11,19 +11,27 @@
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
   gap: clamp(24px, 4vw, 68px);
   align-items: center;
-  padding-block: clamp(36px, 4.7vw, 76px) clamp(24px, 3.5vw, 54px);
+  padding-block: clamp(36px, 4.7vw, 72px) clamp(22px, 3vw, 40px);
 }
 .mgto-intro h1 {
   color: var(--mgto-ink);
-  font-size: clamp(2.35rem, 5vw, 5.15rem);
-  line-height: 1.06;
+  font-family: var(--studio-display);
+  font-weight: 300;
+  letter-spacing: .02em;
+  font-size: clamp(2.5rem, 5.2vw, 5.15rem);
+  line-height: 1.08;
   margin: 16px 0 18px;
+}
+:lang(en) .mgto-intro h1 {
+  font-weight: 200;
+  letter-spacing: .01em;
+  line-height: .98;
 }
 .mgto-intro h1 span { display: block; }
 .mgto-intro p {
   color: var(--mgto-muted);
-  font-size: 1.03rem;
-  line-height: 1.68;
+  font-size: 1.02rem;
+  line-height: 1.72;
   margin: 0;
   max-width: 32rem;
 }
@@ -41,65 +49,86 @@
   margin-bottom: clamp(32px, 4vw, 56px);
 }
 .mgto-jumps a, .mgto-link {
-  border: 1px solid #aeb9ad;
+  border: 1px solid #b8bfb5;
   border-radius: 99px;
-  color: #25392d;
+  background: rgba(255, 255, 255, .62);
+  color: var(--mgto-ink);
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-weight: 600;
-  min-height: 44px;
-  padding: 8px 15px;
+  font-size: 13.5px;
+  font-weight: 500;
+  min-height: 40px;
+  padding: 7px 16px;
   text-decoration: none;
+  transition: background .2s, color .2s, border-color .2s, transform .2s;
 }
-.mgto-jumps a:hover, .mgto-link:hover {
-  background: #dee9d9;
-  border-color: #728a74;
+.mgto-jumps a:hover, .mgto-link:hover,
+.mgto-jumps a:focus-visible, .mgto-link:focus-visible {
+  background: var(--mgto-ink);
+  border-color: var(--mgto-ink);
+  color: var(--mgto-paper);
+  transform: translateY(-1px);
 }
 .mgto-section {
   display: block;
-  margin-bottom: clamp(54px, 7vw, 110px);
-  scroll-margin-top: 110px;
+  margin-bottom: clamp(54px, 7vw, 100px);
+  scroll-margin-top: 118px;
 }
 .mgto-section-heading {
   color: var(--mgto-ink);
-  font-size: clamp(1.7rem, 3vw, 2.6rem);
+  font-family: var(--studio-display);
+  font-weight: 300;
+  letter-spacing: .02em;
+  font-size: clamp(1.85rem, 3.2vw, 2.85rem);
   border-top: 1px solid var(--mgto-divider);
   padding-top: 22px;
-  margin: 0 0 22px;
+  margin: 0 0 24px;
+}
+#streets .mgto-section-heading {
+  border-top: 0;
+  padding-top: 0;
 }
 .mgto-grid {
   display: grid;
-  grid-template-columns: repeat(2,minmax(0,1fr));
-  gap: clamp(17px, 2.5vw, 35px);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 2.5vw, 34px);
 }
 .mgto-card {
   min-width: 0;
   background: var(--mgto-light);
   border: 1px solid var(--mgto-divider);
-  border-radius: 8px;
+  border-radius: 6px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  scroll-margin-top: 100px;
+  scroll-margin-top: 108px;
+  transition: border-color .25s;
 }
-.mgto-card-copy { padding: 23px 22px 17px; }
+.mgto-card:hover {
+  border-color: #9ba398;
+}
+.mgto-card-copy { padding: 22px 22px 16px; }
 .mgto-card time {
   color: var(--mgto-muted);
   font-size: .76rem;
   font-variant-numeric: tabular-nums;
+  letter-spacing: .04em;
 }
 .mgto-card h3 {
   color: var(--mgto-ink);
-  font-size: clamp(1.08rem, 1.6vw, 1.5rem);
-  line-height: 1.35;
+  font-family: var(--studio-display);
+  font-weight: 400;
+  letter-spacing: .015em;
+  font-size: clamp(1.18rem, 1.7vw, 1.6rem);
+  line-height: 1.32;
   margin: 7px 0 0;
 }
 .mgto-media {
   margin-top: auto;
   padding: 0 20px 20px;
   display: grid;
-  grid-template-columns: minmax(0,1.24fr) minmax(0,1fr);
+  grid-template-columns: minmax(0, 1.24fr) minmax(0, 1fr);
   align-items: start;
   gap: 12px;
 }
@@ -135,37 +164,42 @@
 }
 .mgto-source-list .mgto-photo-link { aspect-ratio: 2.6; }
 .mgto-source-list img { object-fit: cover; }
-.mgto-link { margin-top: 10px; font-size: .78rem; }
+.mgto-link { margin-top: 10px; font-size: .78rem; min-height: 36px; padding: 6px 14px; }
 .mgto-teaser {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   column-gap: 24px;
-  border-block: 1px solid #cdd3c9;
-  padding-block: 27px;
+  border-block: 1px solid #cbd0c8;
+  padding-block: 28px;
   margin-block: 34px clamp(40px, 7vw, 80px);
 }
-.mgto-teaser h2 { margin: 0 0 7px; }
-.mgto-teaser p { margin: 0; }
-.mgto-teaser .mgto-link { margin: 0; }
-.mgto-page figure:target { outline: 2px solid #507a5d; outline-offset: 3px; }
+.mgto-teaser h2 {
+  margin: 0 0 7px;
+  font-family: var(--studio-display);
+  font-weight: 300;
+  font-size: clamp(28px, 3vw, 44px);
+}
+.mgto-teaser p { margin: 0; color: #5c635c; }
+.mgto-teaser .mgto-link { margin: 0; min-height: 42px; padding: 8px 18px; font-size: 13.5px; }
+.mgto-page figure:target { outline: 2px solid #202420; outline-offset: 3px; }
 .mgto-page :focus-visible, .mgto-teaser :focus-visible {
-  outline: 2px solid #246443;
+  outline: 2px solid #202420;
   outline-offset: 3px;
 }
 @media(max-width: 875px) {
-  .mgto-grid { grid-template-columns: minmax(0,1fr); }
-  .mgto-intro { grid-template-columns: minmax(0,1fr); }
+  .mgto-grid { grid-template-columns: minmax(0, 1fr); }
+  .mgto-intro { grid-template-columns: minmax(0, 1fr); }
   .mgto-intro img { aspect-ratio: 1.85; }
   .mgto-source-list .mgto-photo-link { aspect-ratio: 2.45; }
 }
 @media(max-width: 465px) {
-  .mgto-card-copy { padding: 17px 13px 12px; }
+  .mgto-card-copy { padding: 17px 14px 12px; }
   .mgto-media { padding: 0 12px 14px; gap: 8px; }
   .mgto-source-list { gap: 5px; }
   .mgto-source-list .mgto-photo-link { aspect-ratio: 2.15; }
   .mgto-media figcaption { font-size: .68rem; }
-  .mgto-link { font-size: .73rem; padding-inline: 10px; }
-  .mgto-teaser { grid-template-columns: minmax(0,1fr); row-gap: 12px; }
+  .mgto-link { font-size: .74rem; padding-inline: 12px; }
+  .mgto-teaser { grid-template-columns: minmax(0, 1fr); row-gap: 14px; }
   .mgto-teaser .mgto-link { justify-self: start; }
 }

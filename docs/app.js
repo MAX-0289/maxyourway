@@ -2,6 +2,21 @@ if (location.hash === '#ifbrand') location.replace('social.html#ifbrand');
 
 const form = document.querySelector('#brief');
 const formStatus = document.querySelector('#formStatus');
+const serviceSelect = form ? form.querySelector('select[name="service"]') : null;
+const serviceIndexMap = { photography: 0, films: 1, social: 2, licensing: 3 };
+
+function syncRequestedService() {
+  if (!serviceSelect) return;
+  try {
+    const key = (new URLSearchParams(location.search).get('service') || '').trim().toLowerCase();
+    if (Object.prototype.hasOwnProperty.call(serviceIndexMap, key)) {
+      serviceSelect.selectedIndex = serviceIndexMap[key];
+    }
+  } catch {}
+}
+syncRequestedService();
+window.addEventListener('popstate', syncRequestedService);
+
 function briefText() {
   const data = new FormData(form);
   const intro = localized('MaxYourWay 团队好，以下是项目需求：', 'Hello MaxYourWay, here is the project brief:', 'MaxYourWay 團隊好，以下是項目需求：');

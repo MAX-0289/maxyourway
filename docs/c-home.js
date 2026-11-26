@@ -5,6 +5,7 @@
   const buttons = rows.map(row => row.querySelector('[data-case]'));
   const filters = [...document.querySelectorAll('[data-filter]')];
   const stage = document.querySelector('#case-stage');
+  const visual = document.querySelector('.case-visual');
   const front = stage.querySelector('.case-front');
   const back = stage.querySelector('.case-back');
   const flip = stage.querySelector('.flip-button');
@@ -50,9 +51,15 @@
     front.inert = false;
     back.inert = true;
   }
-  async function choose(index, force = false) {
+  async function choose(index, force = false, fromTap = false) {
     const token = ++request;
-    if (index === selected && !force) { stage.removeAttribute('aria-busy'); return; }
+    if (index === selected && !force) {
+      stage.removeAttribute('aria-busy');
+      if (fromTap && visual && window.innerWidth <= 650 && visual.getBoundingClientRect().top < 72) {
+        visual.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+      }
+      return;
+    }
     const project = projects[index];
     const sources = [...project.front, ...(project.back.length ? project.back : project.front)];
     stage.setAttribute('aria-busy', 'true');
@@ -71,6 +78,9 @@
       button.setAttribute('aria-pressed', String(active));
     });
     updateCopy();
+    if (fromTap && visual && window.innerWidth <= 650 && visual.getBoundingClientRect().top < 72) {
+      visual.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+    }
   }
   buttons.forEach(button => {
     button.addEventListener('pointerenter', event => {
@@ -79,7 +89,7 @@
     button.addEventListener('focus', () => {
       if (matchMedia('(hover: hover)').matches) choose(Number(button.dataset.case));
     });
-    button.addEventListener('click', () => choose(Number(button.dataset.case)));
+    button.addEventListener('click', () => choose(Number(button.dataset.case), false, true));
     button.addEventListener('keydown', event => {
       if (!['ArrowDown', 'ArrowUp'].includes(event.key)) return;
       event.preventDefault();
@@ -105,8 +115,14 @@
     stage.removeAttribute('aria-busy');
     category = ['all', 'social', 'films'].includes(value) ? value : 'all';
     filters.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === category)));
-    rows.forEach((row, index) => { row.hidden = category !== 'all' && buttons[index].dataset.category !== category; });
-    if (rows[selected].hidden) choose(rows.findIndex(row => !row.hidden));
+    rows.forEach((row, index) => {
+      const cats = (buttons[index].dataset.category || '').split(/\s+/).filter(Boolean);
+      row.hidden = category !== 'all' && !cats.includes(category);
+    });
+    if (rows[selected].hidden) {
+      const nextVisible = rows.findIndex(row => !row.hidden);
+      if (nextVisible !== -1) choose(nextVisible);
+    }
     if (updateUrl) {
       const url = new URL(location.href);
       if (category === 'all') url.searchParams.delete('category');
@@ -125,10 +141,6 @@
   }
   window.addEventListener('popstate', syncLocation);
   document.querySelectorAll('[data-lang]').forEach(button => button.addEventListener('click', updateCopy));
-  const header = document.querySelector('.site-header');
-  const scrollState = () => header.classList.toggle('is-scrolled', window.scrollY > 35);
-  window.addEventListener('scroll', scrollState, { passive: true });
-  scrollState();
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
       const active = entries.filter(entry => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
@@ -142,7 +154,7 @@
   }
   updateCopy();
   syncLocation();
-  const warm = () => projects.slice(0, 3).forEach(project => [...project.front, ...project.back].forEach(image => preload(image.src)));
+  const warm = () => projects.slice(0, 4).forEach(project => [...project.front, ...project.back].forEach(image => preload(image.src)));
   if ('requestIdleCallback' in window) requestIdleCallback(warm, { timeout: 1800 });
   else setTimeout(warm, 500);
 })();

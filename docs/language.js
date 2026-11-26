@@ -36,10 +36,14 @@ function applyLanguage() {
   document.querySelectorAll('[data-zh][data-en]').forEach(element => {
     element.textContent = localized(element.dataset.zh, element.dataset.en, element.dataset.zhHant).replaceAll('\\n', '\n');
   });
-  for (const attribute of ['alt', 'aria-label']) {
+  for (const attribute of ['alt', 'aria-label', 'data-case-label', 'placeholder']) {
     document.querySelectorAll(`[data-${attribute}-zh]`).forEach(element => {
       const text = element.getAttribute(`data-${attribute}-zh`);
-      const translation = localized(text, element.getAttribute(`data-${attribute}-en`) ?? text, element.getAttribute(`data-${attribute}-zh-hant`) ?? text);
+      const translation = localized(
+        text,
+        element.getAttribute(`data-${attribute}-en`) ?? text,
+        element.getAttribute(`data-${attribute}-zh-hant`) ?? text
+      );
       element.setAttribute(attribute, translation);
     });
   }
@@ -58,13 +62,33 @@ languageButtons.forEach(button => button.addEventListener('click', () => {
 applyLanguage();
 
 const siteHeader = document.querySelector('.site-header');
+const navigationMenu = document.querySelector('.nav-menu');
 if (siteHeader) {
-  const updateHeaderShadow = () => siteHeader.classList.toggle('is-scrolled', window.scrollY > 28);
-  window.addEventListener('scroll', updateHeaderShadow, { passive: true });
-  updateHeaderShadow();
+  let shortcutScrollY = window.scrollY;
+  const updateHeaderState = () => {
+    const y = window.scrollY;
+    siteHeader.classList.toggle('is-scrolled', y > 28);
+    if (y <= 420 || (navigationMenu && navigationMenu.open)) {
+      siteHeader.classList.remove('shortcuts-hidden');
+      shortcutScrollY = y;
+    } else if (siteHeader.classList.contains('shortcuts-hidden')) {
+      shortcutScrollY = Math.max(shortcutScrollY, y);
+      if (shortcutScrollY - y >= 8) {
+        siteHeader.classList.remove('shortcuts-hidden');
+        shortcutScrollY = y;
+      }
+    } else {
+      shortcutScrollY = Math.min(shortcutScrollY, y);
+      if (y > 520 && y - shortcutScrollY >= 8) {
+        siteHeader.classList.add('shortcuts-hidden');
+        shortcutScrollY = y;
+      }
+    }
+  };
+  window.addEventListener('scroll', updateHeaderState, { passive: true });
+  updateHeaderState();
 }
 
-const navigationMenu = document.querySelector('.nav-menu');
 if (navigationMenu) {
   document.addEventListener('click', event => {
     if (navigationMenu.open && (!navigationMenu.contains(event.target) || event.target.closest('a'))) {
@@ -102,4 +126,61 @@ document.querySelectorAll('[data-copy-wechat]').forEach(button => {
       }
     }
   });
+});
+
+// Universal single-active-video guard across films, social reels, and case pages
+document.addEventListener('play', event => {
+  if (!(event.target instanceof HTMLVideoElement)) return;
+  document.querySelectorAll('video').forEach(player => {
+    if (player !== event.target && !player.paused) player.pause();
+  });
+}, true);
+
+// Horizontal strip carousel controls for live photo albums
+document.querySelectorAll('[data-strip-carousel]').forEach(card => {
+  const strip = card.querySelector('.live-strip');
+  if (!strip) return;
+  const slides = Array.from(strip.querySelectorAll('.live-figure'));
+  const back = card.querySelector('[data-strip-back]');
+  const next = card.querySelector('[data-strip-next]');
+  const count = card.querySelector('.strip-count');
+  if (!slides.length || !back || !next || !count) return;
+
+  function currentSlide() {
+    const left = strip.getBoundingClientRect().left;
+    const idx = slides.findIndex(slide => slide.getBoundingClientRect().right > left + 8);
+    return idx === -1 ? 0 : idx;
+  }
+
+  function update() {
+    const first = Math.max(0, currentSlide());
+    const right = strip.getBoundingClientRect().right;
+    const last = slides.reduce(
+      (lastVisible, slide, i) => (slide.getBoundingClientRect().left < right - 8 ? i : lastVisible),
+      first
+    );
+    count.textContent = (first === last ? first + 1 : `${first + 1}–${last + 1}`) + ` / ${slides.length}`;
+    back.disabled = strip.scrollLeft <= 2;
+    next.disabled = strip.scrollWidth - strip.clientWidth - strip.scrollLeft <= 2;
+  }
+
+  function move(direction) {
+    const index = Math.max(0, Math.min(slides.length - 1, currentSlide() + direction));
+    const offset = slides[index].getBoundingClientRect().left - strip.getBoundingClientRect().left;
+    strip.scrollBy({
+      left: offset,
+      behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
+    });
+  }
+
+  back.addEventListener('click', () => move(-1));
+  next.addEventListener('click', () => move(1));
+  strip.addEventListener('keydown', event => {
+    if (event.target !== strip || !['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+    event.preventDefault();
+    move(event.key === 'ArrowRight' ? 1 : -1);
+  });
+  strip.addEventListener('scroll', update, { passive: true });
+  if ('ResizeObserver' in window) new ResizeObserver(update).observe(strip);
+  update();
 });
